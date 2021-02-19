@@ -12,6 +12,12 @@
 /* ==========================================
             SMOOTH SCROLLING
 =============================================*/
+
+$(function () {
+
+    // animate on scroll
+    new WOW().init();
+});
 $(function () {
 
     $("a.smooth-scroll").click(function (event) {
@@ -23,4 +29,13 @@ $(function () {
         }, 1250, "easeInOutExpo");
     });
 
+});
+
+// Close mobile menu on click
+$(function(){
+    
+    $(".navbar-collapse ul li a").on("click touch", function(){
+       
+        $(".navbar-toggle").click();
+    });
 });
