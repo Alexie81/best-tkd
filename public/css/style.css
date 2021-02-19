@@ -370,3 +370,15 @@ body{
   margin-top: -30px;
   margin-bottom: 30px;
 }
+#depre-content-box-informations-word li p{
+  font-size: 18px !important;
+display: inline !important;
+}
+#depre-content-box-informations-word li strong{
+  display: inline !important;
+  }
+  #depre-content-box-informations-word{
+    list-style: disc;
+    text-align: left;
+    /* margin-left: 80px; */
+  }
