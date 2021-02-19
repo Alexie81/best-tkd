@@ -118,6 +118,7 @@ body {
   #depre-content-box-informations{
     margin-right: -200px !important;
   }
+  
 }
 @media (min-width:1136px) and (max-width:1569px){
   #depre-content-box-informations{
@@ -126,6 +127,7 @@ body {
  }
 @media (min-width: 768px) and (max-width: 991px) {
   .bg-parallax {
+    margin-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
@@ -141,6 +143,15 @@ body {
   text-align: center !important;
   margin-left: 110px !important;
   margin-right: 80px !important;
+}
+#despre-content-box1 {
+  width: 100% !important;
+  height: 350px !important;
+}
+#depre-content-box-informations1{
+text-align: center !important;
+margin-left: 110px !important;
+margin-right: 80px !important;
 }
 #despre-gif1{
   display: none !important;
@@ -171,6 +182,10 @@ body {
       margin-left: 0 !important;
         margin-right: 0 !important;
     }
+    #depre-content-box-informations1{
+      margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 @media (min-width: 481px) and (max-width: 768px) {
     #home-cover-title{ 
@@ -180,6 +195,7 @@ body {
         font-size: 28px;
     }
     .bg-parallax {
+      margin-top: 0 !important;
       border-left: 0 !important;
       border-right: 0 !important;
       border-top: 0 !important;
@@ -196,6 +212,15 @@ body {
     margin-left: 110px !important;
     margin-right: 80px !important;
   }
+  #despre-content-box1 {
+    width: 100% !important;
+    height: 350px !important;
+}
+#depre-content-box-informations1{
+  text-align: center !important;
+  margin-left: 110px !important;
+  margin-right: 80px !important;
+}
   #despre-gif1{
     display: none !important;
   }
@@ -204,6 +229,10 @@ body {
     margin-left: 0 !important;
   }
   #depre-content-box-informations{
+    margin-left: 0 !important;
+      margin-right: 0 !important;
+  }
+  #depre-content-box-informations1{
     margin-left: 0 !important;
       margin-right: 0 !important;
   }
@@ -216,6 +245,7 @@ body {
 }
 @media (min-width: 320px) and (max-width:479px){
   .bg-parallax {
+    margin-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
@@ -231,6 +261,15 @@ body {
   text-align: center !important;
   margin-left: 110px !important;
   margin-right: 80px !important;
+}
+#despre-content-box1 {
+  width: 100% !important;
+  height: 350px !important;
+}
+#depre-content-box-informations1{
+text-align: center !important;
+margin-left: 110px !important;
+margin-right: 80px !important;
 }
 #despre-gif1{
   display: none !important;
@@ -243,6 +282,10 @@ body {
   margin-left: 10px !important;
     margin-right: 0 !important;
 }
+#depre-content-box-informations1{
+  margin-left: 10px !important;
+    margin-right: 0 !important;
+}
 }
 
 @media (min-width: 120px) and (max-width:319px){
@@ -250,6 +293,7 @@ body {
     width: 100% !important;
   }
   .bg-parallax {
+    margin-top: 0 !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
@@ -266,6 +310,15 @@ body {
   margin-left: 110px !important;
   margin-right: 80px !important;
 }
+#despre-content-box1{
+  width: 100% !important;
+  height: 350px !important;
+}
+#depre-content-box-informations1{
+text-align: center !important;
+margin-left: 110px !important;
+margin-right: 80px !important;
+}
 #despre-gif1{
   display: none !important;
 }
@@ -274,6 +327,10 @@ body {
   margin-left: 0 !important;
 }
 #depre-content-box-informations{
+  margin-left: 10px !important;
+    margin-right: 0 !important;
+}
+#depre-content-box-informations1{
   margin-left: 10px !important;
     margin-right: 0 !important;
 }
@@ -449,4 +506,31 @@ display: inline !important;
     background-image: url(../img/background-home/backr2.jpg);
     border-right: 200px solid #fff;
     border-top: 700px solid transparent;
+    margin-top: -100px;
+  }
+
+  #depre-content-box1{
+    float: left;
+    height: 700px !important;
+    margin-top: -60px;
+  }
+  #despre-content-box-outer1 {
+    width: 100%;
+    height: 100%;
+    display: table;
+  }
+  #depre-content-box-inner1{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #depre-content-box-informations1{
+    text-align: center;
+    margin-right: -50px;
+    transition: .4s ease-in-out;
+  }
+  #depre-content-box-informations1 p{
+    font-size: 22px;
+  }
+  #despre-titlu1{
+    margin-left: 40px;
   }
