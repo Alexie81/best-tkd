@@ -5,7 +5,11 @@ html,
 body{
     font-family: Roboto Condensed;
     height: 100%;
-    width: 100%;
+    min-width: 100%;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
 }
 #home{
     height: 100%;
@@ -16,11 +20,17 @@ body{
     width: 100%;
     background-image: url("../img/background-home/backr3.jpg");
 }
-.bg-parallax {
+.bg-parallax1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+.bg-parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 #home-content-box {
     width: 100%;
@@ -105,12 +115,22 @@ body{
   #despre-gif1{
     margin-left: 10% !important;
   }
+  #depre-content-box-informations{
+    margin-right: -200px !important;
+  }
 }
+@media (min-width:1136px) and (max-width:1569px){
+  #depre-content-box-informations{
+     margin-right: -250px !important;
+   }
+ }
 @media (min-width: 768px) and (max-width: 991px) {
-  #about-bg-diagonal {
+  .bg-parallax {
     border-left: 0 !important;
+    border-right: 0 !important;
     border-top: 0 !important;
     width: 100% !important;
+    border-bottom: 0 !important;
     height: 350px !important;
 }
 #despre-content-box {
@@ -159,10 +179,12 @@ body{
     #home-cover-title h1{
         font-size: 28px;
     }
-    #about-bg-diagonal {
+    .bg-parallax {
       border-left: 0 !important;
+      border-right: 0 !important;
       border-top: 0 !important;
       width: 100% !important;
+      border-bottom: 0 !important;
       height: 350px !important;
   }
   #despre-content-box {
@@ -193,10 +215,46 @@ body{
     }
 }
 @media (min-width: 320px) and (max-width:479px){
-  #about-bg-diagonal {
+  .bg-parallax {
     border-left: 0 !important;
+    border-right: 0 !important;
     border-top: 0 !important;
     width: 100% !important;
+    border-bottom: 0 !important;
+    height: 350px !important;
+}
+#despre-content-box {
+    width: 100% !important;
+    height: 350px !important;
+}
+#depre-content-box-informations{
+  text-align: center !important;
+  margin-left: 110px !important;
+  margin-right: 80px !important;
+}
+#despre-gif1{
+  display: none !important;
+}
+.content-title{
+  margin-top: 130px !important;
+  margin-left: 0 !important;
+}
+#depre-content-box-informations{
+  margin-left: 10px !important;
+    margin-right: 0 !important;
+}
+}
+
+@media (min-width: 120px) and (max-width:319px){
+  html{
+    width: 100% !important;
+  }
+  .bg-parallax {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    width: 100% !important;
+    border-bottom: 0 !important;
     height: 350px !important;
 }
 #despre-content-box {
@@ -349,7 +407,8 @@ body{
 }
 #depre-content-box-informations{
   margin-left: 100px;
-  margin-right: -70px;
+  margin-right: -100px;
+  transition: .4s ease-in-out;
 }
 #depre-content-box-informations p{
   font-size: 21px;
@@ -370,7 +429,7 @@ body{
   margin-top: -30px;
   margin-bottom: 30px;
 }
-#depre-content-box-informations-word li p{
+/* #depre-content-box-informations-word li p{
   font-size: 18px !important;
 display: inline !important;
 }
@@ -378,7 +437,16 @@ display: inline !important;
   display: inline !important;
   }
   #depre-content-box-informations-word{
-    list-style: disc;
+    list-style: none;
     text-align: left;
-    /* margin-left: 80px; */
+    margin-left: 0px;
+  } */
+
+  #about-bg-diagonal-left {
+    width: 60%;
+    height: 700px;
+    float: left;
+    background-image: url(../img/background-home/backr2.jpg);
+    border-right: 200px solid #fff;
+    border-top: 700px solid transparent;
   }
