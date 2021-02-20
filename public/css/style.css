@@ -140,9 +140,19 @@ body {
     height: 1600px !important;
   }
 }
-@media (min-width:120px) and (max-width:608px){
+@media (min-width:360px) and (max-width:608px){
   #antrenamente{
-    margin-top: 170px;
+    margin-top: 210px !important;
+  }
+}
+@media (min-width:120px) and (max-width:359px){
+  #antrenamente{
+    margin-top: 470px !important;
+  }
+}
+@media (min-width:608px) and (max-width:1241px){
+  #antrenamente{
+    margin-top: 0 !important;
   }
 }
 @media (min-width:992px){
@@ -577,7 +587,7 @@ display: inline !important;
   } */
 
   #about-bg-diagonal-left {
-    width: 55%;
+    width: 50%;
     height: 700px;
     float: left;
     background-image: url(../img/background-home/backr2.jpg);
@@ -655,6 +665,7 @@ display: inline !important;
   width: 100% !important;
 }
 #antrenamente{
+  margin-top: -70px;
   width: 100% !important;
   transition: .3s ease-in-out;
 }
@@ -714,4 +725,10 @@ background-color: transparent;
   margin-top: 20px;
   font-size: 19px;
   list-style: circle;
+}
+#default-hover-info-despre:hover{
+cursor: default;
+}
+#default-hover-info-despre::selection{
+  background-color: transparent;
 }
