@@ -142,12 +142,23 @@ body {
 }
 @media (min-width:360px) and (max-width:608px){
   #antrenamente{
-    margin-top: 210px !important;
+    margin-top: 110px !important;
+  }
+}
+@media (min-width:360px) and (max-width:767px){
+  #despre-titlu1{
+    margin-top: 0 !important;
+  }
+  #despre-titlu{
+    margin-top: 80px !important;
   }
 }
 @media (min-width:120px) and (max-width:359px){
   #antrenamente{
-    margin-top: 470px !important;
+    margin-top: 350px !important;
+  }
+  #despre-titlu1{
+    margin-top: 0 !important;
   }
 }
 @media (min-width:608px) and (max-width:1241px){
@@ -182,6 +193,11 @@ body {
  #despre-titlu1{
   margin-top: -130px !important;
 }
+ }
+ @media (min-width:484px) and (max-width:991px){
+   #antrenamente{
+     margin-top: 0 !important;
+   }
  }
 @media (min-width: 768px) and (max-width: 991px) {
   .bg-parallax {
@@ -665,7 +681,7 @@ display: inline !important;
   width: 100% !important;
 }
 #antrenamente{
-  margin-top: -70px;
+  margin-top: -90px;
   width: 100% !important;
   transition: .3s ease-in-out;
 }
@@ -732,3 +748,6 @@ cursor: default;
 #default-hover-info-despre::selection{
   background-color: transparent;
 }
+/* #despre-titlu3{
+  text-align: center;
+} */
