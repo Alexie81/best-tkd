@@ -22,14 +22,14 @@ body {
 }
 .bg-parallax1 {
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    /* background-position: center; */
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 .bg-parallax {
   background-repeat: no-repeat;
   background-size:cover;
-  /* background-position: center; */
+  background-position: center;
   background-attachment: fixed;
 }
 #home-content-box {
