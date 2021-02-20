@@ -32,6 +32,12 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+.bg-parallax4{
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 #home-content-box {
     width: 100%;
     height: 100%;
@@ -104,7 +110,22 @@ body {
     background-color: rgba(243, 243, 243, 1);
     color: rgba(0, 65, 179, .7);
 }
-
+@media (max-width:1300px){
+  .info-white{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+@media (min-width:320px){
+  /* .row{
+    width: 100% !important;
+  } */
+}
+@media (min-width:120px) and (max-width:608px){
+  #antrenamente{
+    margin-top: 170px;
+  }
+}
 @media (min-width:992px){
   #despre-gif1{
     display: block-inline !important;
@@ -143,6 +164,12 @@ body {
     border-bottom: 0 !important;
     height: 350px !important;
 }
+#despre-titlu1{
+  margin-top: 10px !important;
+}
+#despre-titlu2{
+  margin-top: 0 !important;
+}
 #despre-content-box {
     width: 100% !important;
     height: 350px !important;
@@ -180,6 +207,25 @@ margin-right: 80px !important;
     #home-cover-title h1{
         font-size: 28px;
     }
+
+.info-white{
+  margin: 2px 2px 2px 2px;
+  font-size: 20px;
+}
+#antrenamente{
+  height: 600px !important;
+}
+#antrenamente #despre-cover{
+  height: 600px !important;
+}
+
+
+    #antrenamente{
+      margin-top: 250px;
+    }
+    #despre-titlu2{
+      margin-top: 0 !important;
+    }
     #home-cover-title{
         width: 100%;
     }
@@ -198,6 +244,9 @@ margin-right: 80px !important;
 @media (min-width: 481px) and (max-width: 768px) {
     #home-cover-title{ 
         width: 100%;
+    }
+    #despre-titlu2{
+      margin-top: 0 !important;
     }
     #home-cover-title h1{
         font-size: 28px;
@@ -455,6 +504,7 @@ margin-right: 80px !important;
 }
 #despre{
   margin-top: 70px;
+  height: auto;
 }
 #depre-content-box{
   float: left;
@@ -514,7 +564,7 @@ display: inline !important;
     background-image: url(../img/background-home/backr2.jpg);
     border-right: 200px solid #fff;
     border-top: 700px solid transparent;
-    margin-top: -100px;
+    margin-top: -160px;
   }
 
   #depre-content-box1{
@@ -555,13 +605,13 @@ display: inline !important;
   height: 500px;
   background-image: url('../img/background-home/backr1.jpg');
 }
-#despre .content-box{
+#antrenamente .content-box{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#despre .content-title h3{
+#despre-cover .content-title h3{
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 34px;
 }
 #despre-titlu3{
@@ -569,5 +619,51 @@ display: inline !important;
 }
 #under-2{
   width: 250px;
-  background-color: rgba(53, 102, 187, 0.856);
+  background-color: rgba(148, 177, 228, 0.856);
+}
+.info-white{
+  margin-top: 100px;
+  text-align: center;
+  margin-right: 400px;
+  margin-left: 400px;
+}
+.info-white p{
+  color: #fff;
+  font-size: 22px;
+}
+#despre-cover{
+  display: block;
+  width: 100% !important;
+}
+#antrenamente{
+  width: 100% !important;
+  transition: .3s ease-in-out;
+}
+#sigla-coreana{
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+#sigla-coreana h2{
+  color: rgba(0, 65, 179, .4);
+  letter-spacing: 20px;
+  font-weight: 700;
+  font-size: 50px;
+  text-shadow: 10px 10px 5px rgb(119, 119, 119);
+  transition: .3s ease-in-out all;
+}
+#sigla-coreana h2::selection{
+background-color: transparent;
+}
+#sigla-coreana h2:hover{
+  cursor: default;
+  color: #fff;
+}
+#first-letter:hover{
+  transform: scale(1.05);
+}
+#second-letter:hover{
+  transform: scale(1.05);
+}
+#third-letter:hover{
+  transform: scale(1.05);
 }
