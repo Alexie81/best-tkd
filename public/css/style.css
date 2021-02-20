@@ -116,10 +116,29 @@ body {
     margin-left: 0 !important;
   }
 }
+@media (max-width:982px){
+  #sport{
+    height: 1200px !important;
+  }
+  #sport-cover{
+    height: 1200px !important;
+  }
+  #info-sport{
+    margin: 10px auto !important;
+  }
+}
 @media (min-width:320px){
   /* .row{
     width: 100% !important;
   } */
+}
+@media (min-width:120px) and (max-width:452px){
+  #sport{
+    height: 1600px !important;
+  }
+  #sport-cover{
+    height: 1600px !important;
+  }
 }
 @media (min-width:120px) and (max-width:608px){
   #antrenamente{
@@ -591,16 +610,16 @@ display: inline !important;
     font-size: 22px;
   }
   #despre-titlu1{
-    margin-top: -30px;
+    margin-top: -125px;
     margin-left: 40px;
     transition: .4s ease-in-out;
   }
 
-  @-webkit-keyframes spin { 
+  /* @-webkit-keyframes spin { 
     100% { 
         transform: rotate(180deg);
     } 
-}
+} */
 #despre-cover{
   height: 500px;
   background-image: url('../img/background-home/backr1.jpg');
@@ -666,4 +685,33 @@ background-color: transparent;
 }
 #third-letter:hover{
   transform: scale(1.05);
+}
+
+/*SPORT*/
+#sport{
+  text-shadow: 1px 1px 3px #000;
+  color: #fff;
+  height: 700px;
+  width: 100%;
+  transition: .4s ease-in-out;
+}
+#sport-cover{
+  margin-top: 70px;
+  height: 800px;
+  width: 100%;
+  background-image: url('../img/kids1.jpg');
+  transition: .4s ease-in-out;
+}
+.content-box4{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* #despre-titlu4{
+  
+} */
+#sport ul{
+  margin-top: 20px;
+  font-size: 19px;
+  list-style: circle;
 }
