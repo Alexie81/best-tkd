@@ -22,14 +22,14 @@ body {
 }
 .bg-parallax1 {
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    /* background-position: center; */
     background-attachment: fixed;
 }
 .bg-parallax {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size:100%;
+  /* background-position: center; */
   background-attachment: fixed;
 }
 #home-content-box {
@@ -124,6 +124,14 @@ body {
   #depre-content-box-informations{
      margin-right: -250px !important;
    }
+   #despre-titlu1{
+    margin-top: -130px !important;
+  }
+ }
+ @media (min-width:992px) and (max-width:1135px){
+ #despre-titlu1{
+  margin-top: -130px !important;
+}
  }
 @media (min-width: 768px) and (max-width: 991px) {
   .bg-parallax {
@@ -500,7 +508,7 @@ display: inline !important;
   } */
 
   #about-bg-diagonal-left {
-    width: 60%;
+    width: 55%;
     height: 700px;
     float: left;
     background-image: url(../img/background-home/backr2.jpg);
@@ -512,7 +520,7 @@ display: inline !important;
   #depre-content-box1{
     float: left;
     height: 700px !important;
-    margin-top: -60px;
+    margin-top: 0;
   }
   #despre-content-box-outer1 {
     width: 100%;
@@ -521,10 +529,11 @@ display: inline !important;
   }
   #depre-content-box-inner1{
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: unset;
   }
   #depre-content-box-informations1{
-    text-align: center;
+    margin-top: 0;
+    text-align: left;
     margin-right: -50px;
     transition: .4s ease-in-out;
   }
@@ -532,5 +541,19 @@ display: inline !important;
     font-size: 22px;
   }
   #despre-titlu1{
+    margin-top: -30px;
     margin-left: 40px;
+    transition: .4s ease-in-out;
+  }
+
+  @keyframes anim1{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.05);
+    }
+    100%{
+      transform: scale(1);
+    }
   }
