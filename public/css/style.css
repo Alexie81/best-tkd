@@ -104,6 +104,10 @@ body {
     background-color: rgba(243, 243, 243, .7);
     transition: .4s ease-in-out;
 }
+.btn-white1{
+  border-color: #fff;
+  color: #fff;
+}
 
 .btn-white:hover,
 .btn-white:focus {
@@ -750,4 +754,133 @@ cursor: default;
 }
 /* #despre-titlu3{
   text-align: center;
+} */
+
+/*====================================================
+                       CONTACT
+======================================================*/
+
+footer {
+  margin-top: 100px;
+  background-color: #ffffff;
+  padding-top: 30px;
+  border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#contact-left h3,
+#contact-right h3 {
+  color: rgb(0, 0, 0);
+  font-size: 27px;
+  font-weight: 700;
+}
+
+#contact-left p {
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+#contact-left a{
+  color: #000;
+}
+
+#contact-info {
+  /* background-image: url("../img/world-map.png"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+address {
+  color: rgb(0, 0, 0);
+}
+address strong { font-size: 16px; }
+address strong,
+#phone-fax-email strong {
+  letter-spacing: 1px;
+}
+
+form .form-control {
+  background: transparent;
+  border-radius: 0;
+  border-color: rgb(146, 146, 146);
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  resize: none;
+}
+#map1{
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+/*====================================================
+                       NAVIGATION
+======================================================*/
+
+.navbar {
+  padding: 20px 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.vesco-top-nav {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 7px 0;
+}
+
+.vesco-nav-wrapper {
+  padding: 0 85px;
+}
+
+.navbar-nav {
+  float: right;
+}
+
+.navbar-nav>li>a {
+  color: rgba(0, 65, 179, .8);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800 !important;
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+  background: none;
+  color: rgba(0, 0, 0, .6);
+}
+
+.navbar-toggle {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-collapse {
+  max-height: none !important;
+}
+
+.vesco-top-nav ul.navbar-nav>li.active>a {
+  transition: .2s ease-in-out;
+  color: rgba(0, 65, 179, .4);
+}
+.vesco-top-nav ul.navbar-nav>li.active>a {
+  transition: .2s ease-in-out;
+  color: rgb(53, 127, 255) !important;
+}
+.vesco-top-nav a{
+  color: #fff !important;
+}
+.vesco-top-nav a:hover{
+  transition: .2s ease-in-out;
+  color: rgb(53, 127, 255) !important;
+}
+/* .vesco-top-nav a:active{
+  color: rgb(53, 127, 255) !important;
 } */
