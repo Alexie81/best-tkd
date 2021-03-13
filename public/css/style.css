@@ -105,8 +105,14 @@ body {
     transition: .4s ease-in-out;
 }
 .btn-white1{
-  border-color: #fff;
-  color: #fff;
+  border-color: rgba(0, 65, 179, .4);
+  border-width: 1.5px;
+  color: rgba(0, 65, 179, .4);
+  border-radius: 4px;
+  width: 120px;
+}
+.btn-white1:hover{
+  color: rgba(0, 65, 179, .8);
 }
 
 .btn-white:hover,

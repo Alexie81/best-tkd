@@ -1,0 +1,128 @@
+/*==================================================
+			Bootstrap 3 Media Queries         
+==================================================*/
+
+
+/* Large Devices (Desktops & Laptops) */
+
+@media (min-width: 1200px) {
+    /* OK */
+}
+
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Mobile menu */
+    .navbar {
+        background: rgba(0, 0, 0, .7);
+        padding: 10px;
+    }
+    .navbar-nav {
+        float: left;
+    }
+    .vesco-nav-wrapper {
+        padding: 0;
+    }
+    .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgba(0, 94, 255, 0.4);
+      }
+      .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+      .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-nav>li>a:hover{
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+}
+
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Mobile menu */
+    .navbar {
+        background: rgba(0, 0, 0, .7);
+        padding: 10px;
+    }
+    .navbar-nav {
+        float: left;
+    }
+    .vesco-nav-wrapper {
+        padding: 0;
+    }
+    /* Footer */
+    #footer-copyrights {
+        text-align: center;
+    }
+    .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgba(0, 94, 255, 0.4);
+      }
+      .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+      .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-nav>li>a:hover{
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+}
+
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+    /* Mobile menu */
+    .navbar {
+        background: rgba(0, 0, 0, .7);
+        padding: 10px;
+    }
+    .navbar-nav {
+        float: left;
+    }
+    .vesco-nav-wrapper {
+        padding: 0;
+    }
+    /* Footer */
+    #footer-copyrights {
+        text-align: center;
+    }
+    .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgba(0, 94, 255, 0.4);
+      }
+      .vesco-top-nav ul.navbar-nav>li.active>a {
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+      .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-nav>li>a:hover{
+        transition: .2s ease-in-out;
+        color: rgb(53, 127, 255) !important;
+      }
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller devices) */
+
+@media (max-width: 480px) {
+    /* OK */
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller devices) */
+
+@media (max-width: 320px) {
+         /*OK*/
+}
