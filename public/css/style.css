@@ -657,7 +657,7 @@ display: inline !important;
     } 
 } */
 #despre-cover{
-  height: 500px;
+  height: 650px;
   background-image: url('../img/background-home/backr1.jpg');
 }
 #antrenamente .content-box{
@@ -665,6 +665,7 @@ display: inline !important;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #despre-cover .content-title h3{
+  margin-top: 100px;
   color: #fff;
   font-weight: 500;
   font-size: 34px;
@@ -744,9 +745,9 @@ background-color: transparent;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* #despre-titlu4{
-  
-} */
+#despre-titlu4{
+ margin-top: 100px; 
+}
 #sport ul{
   margin-top: 20px;
   font-size: 19px;
@@ -767,10 +768,10 @@ cursor: default;
 ======================================================*/
 
 footer {
-  margin-top: 100px;
+  margin-top: 150px;
   background-color: #ffffff;
   padding-top: 30px;
-  border-top: 5px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 5px solid rgba(0, 0, 0, 0.1); */
 }
 
 #contact-left h3,
