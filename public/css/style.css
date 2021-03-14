@@ -112,7 +112,8 @@ body {
   width: 120px;
 }
 .btn-white1:hover{
-  color: rgba(0, 65, 179, .8);
+  background-color: rgba(0, 65, 179, .4);
+  color: #fff;
 }
 
 .btn-white:hover,
@@ -772,6 +773,7 @@ footer {
   background-color: #ffffff;
   padding-top: 30px;
   /* border-top: 5px solid rgba(0, 0, 0, 0.1); */
+  transition: .4s ease-in-out;
 }
 
 #contact-left h3,
@@ -787,7 +789,7 @@ footer {
 }
 
 #contact-left a{
-  color: #000;
+  color: rgb(53, 127, 255);
 }
 
 #contact-info {

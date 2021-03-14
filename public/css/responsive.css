@@ -42,6 +42,9 @@
       #despre-titlu4{
         margin-top: 30px; 
        }
+       footer{
+           margin-top: 100px;
+       }
 }
 
 
@@ -81,6 +84,9 @@
       #despre-titlu4{
         margin-top: 30px; 
        }
+       footer{
+        margin-top: 50px;
+    }
 }
 
 
@@ -120,6 +126,9 @@
       #despre-titlu4{
         margin-top: 30px; 
        }
+       footer{
+        margin-top: 50px;
+    }
 }
 
 
@@ -127,6 +136,9 @@
 
 @media (max-width: 480px) {
     /* OK */
+    footer{
+        margin-top: 50px;
+    }
 }
 
 
@@ -134,4 +146,7 @@
 
 @media (max-width: 320px) {
          /*OK*/
+         footer{
+            margin-top: 50px;
+        }
 }
