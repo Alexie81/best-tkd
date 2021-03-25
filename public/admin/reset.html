@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Admin - Login</title>
+	<title>Admin - Reset_Password</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -38,7 +38,7 @@
 						Sorin Mihai
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Email is required">
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Email is required" id="user_email_for_reset_sent_verification">
 						<input class="input100" type="text" name="username" placeholder="Email" id="user_input">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -46,23 +46,23 @@
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+					<!-- <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
 						<input class="input100" type="password" name="pass" placeholder="Password" id="pass_input">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock"></i>
 						</span>
-					</div>
+					</div> -->
 
-					<div class="container-login100-form-btn p-t-10">
-						<button class="login100-form-btn" id='login-admin'>
-							Login
+					<div class="container-login100-form-btn p-t-10" id="container-login100-form-btn">
+						<button class="login100-form-btn" id='reset-admin' onclick="reset_pass_check_email_log_default_firebase()">
+							Reseteaza parola
 						</button>
 					</div>
 
-					<div class="text-center w-full p-t-25 p-b-230">
-						<a href="reset.html" class="txt1">
-							Ai uitat parola?
+					<div class="text-center w-full p-t-25 p-b-230" id="w-full">
+						<a href="index.html" class="txt1">
+							Logare <p style="display: inline;" class="txt2">➝</p>
 						</a>
 						<br />
 						<br />
@@ -70,6 +70,10 @@
 							Inapoi la site <p style="display: inline;" class="txt2">➝</p>
 						</a>
 					</div>
+
+                    <div class="text-center w-full p-t-25 p-b-230" id="text-to-show-full">
+                        <h3>Linkul pentru resetarea parolei a fost trimis!</h3>
+                    </div>
 
 					<!-- <div class="text-center w-full">
 						<a class="txt1" href="#">
@@ -98,7 +102,8 @@
 <!--==============================Firebase=========================================================-->
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+    <script src="js/security/dist/src/mail/firebase.com/security.js"></script>
 
 	<!-- password: bestTkD#a30a-->
 

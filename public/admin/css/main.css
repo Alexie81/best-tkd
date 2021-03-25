@@ -91,25 +91,57 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder { 
+  color:transparent; 
+}
+input:focus:-moz-placeholder { 
+  color:transparent; 
+}
+input:focus::-moz-placeholder { 
+  color:transparent; 
+}
+input:focus:-ms-input-placeholder {
+   color:transparent;
+   }
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder 
+{ color:transparent; 
+}
+textarea:focus:-moz-placeholder {
+   color:transparent; 
+  }
+textarea:focus::-moz-placeholder {
+   color:transparent; 
+  }
+textarea:focus:-ms-input-placeholder {
+   color:transparent;
+   }
 
-input::-webkit-input-placeholder { color: #999999; }
-input:-moz-placeholder { color: #999999; }
-input::-moz-placeholder { color: #999999; }
-input:-ms-input-placeholder { color: #999999; }
+input::-webkit-input-placeholder {
+   color: #999999; 
+  }
+input:-moz-placeholder {
+   color: #999999;
+   }
+input::-moz-placeholder { 
+  color: #999999;
+}
+input:-ms-input-placeholder {
+   color: #999999; 
+  }
 
-textarea::-webkit-input-placeholder { color: #999999; }
-textarea:-moz-placeholder { color: #999999; }
-textarea::-moz-placeholder { color: #999999; }
-textarea:-ms-input-placeholder { color: #999999; }
+textarea::-webkit-input-placeholder { 
+  color: #999999;
+ }
+textarea:-moz-placeholder {
+   color: #999999; 
+  }
+textarea::-moz-placeholder {
+   color: #999999; 
+  }
+textarea:-ms-input-placeholder {
+   color: #999999; 
+  }
 
 /*---------------------------------------------*/
 button {
@@ -134,6 +166,19 @@ iframe {
   font-size: 16px;
   color: #cccccc;
   line-height: 1.4;
+}
+
+.txt2 {
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.4;
+  transition: .3s ease-in-out;
+}
+
+.txt1:hover .txt2 {
+  color: #fff;
+  padding-left: 5px;
 }
 
 .bo1 {
@@ -525,4 +570,10 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+
+/*------------------------BUTTON GO TO SITE-------------------------*/
+#text-to-show-full{
+  display: none !important;
 }

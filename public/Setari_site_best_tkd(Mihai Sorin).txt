@@ -1,0 +1,11 @@
+tkd Razvan. anglia: ftp: razvanfatu.myds.me:60021 (use explicit FTP over TLS if available)
+phpmyadmin: http://razvanfatu.myds.me/phpMyAdmin/  
+local mysql port: 127.0.0.1:3307
+
+
+user: best-tkd
+pass: u_fm=XWQP7aujWBE
+tkd Razvan. anglia: user si pass sunt aceleasi si pentru mysql si pentru ftp
+tkd Razvan. anglia: in FTP, folderul www_best-tkd.ro este cel pentru continutul web
+
+TEST-SERVER-PART: https://test.best-tkd.ro/
