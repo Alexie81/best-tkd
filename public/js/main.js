@@ -48,21 +48,28 @@ $(function () {
             // hide nav
             $("nav").removeClass("vesco-top-nav");
             $("#back-to-top").fadeOut();
+            $("#logo_to_hide1").fadeOut();
 
         } else {
             // show nav
             $("nav").addClass("vesco-top-nav");
             $("#back-to-top").fadeIn();
+            $("#logo_to_hide1").fadeIn();
         }
     });
     if ($(this).scrollTop() < 50) {
         // hide nav
         $("nav").removeClass("vesco-top-nav");
         $("#back-to-top").fadeOut();
-
+        document.getElementById('logo_to_hide1').style.display = "none";
     } else {
         // show nav
         $("nav").addClass("vesco-top-nav");
         $("#back-to-top").fadeIn();
+        $("#logo_to_hide1").fadeIn();
     }
+});
+
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
 });

@@ -845,6 +845,7 @@ form .form-control {
 
 .navbar-nav {
   float: right;
+  margin-right: -60px !important;
 }
 
 .navbar-nav>li>a {
