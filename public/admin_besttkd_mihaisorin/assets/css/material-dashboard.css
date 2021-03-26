@@ -19239,7 +19239,7 @@ Copyright (c) 2015 Daniel Eden
   }
 
   .close-layer {
-    height: 100%;
+    height: 520%;
     width: 100%;
     position: absolute;
     opacity: 0;
@@ -19247,7 +19247,7 @@ Copyright (c) 2015 Daniel Eden
     left: auto;
     background: rgba(0, 0, 0, 0.35);
     content: "";
-    z-index: 9999;
+    z-index: 9990;
     overflow-x: hidden;
     -webkit-transition: all 370ms ease-in;
     -moz-transition: all 370ms ease-in;

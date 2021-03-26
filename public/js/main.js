@@ -29,7 +29,7 @@ $(function () {
         }, 1250, "easeInOutExpo");
     });
 
-});
+})
 
 // Close mobile menu on click
 $(function(){
