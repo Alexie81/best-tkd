@@ -18,6 +18,6 @@ var firebaseConfig = {
         $('body').css('display', 'block');
     }else{
         $('body').css('display', 'none');
-        window.location = "index.html";
+        window.location = "../index.html";
     }
 });
