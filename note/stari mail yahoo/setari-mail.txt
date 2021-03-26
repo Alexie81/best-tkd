@@ -1,0 +1,17 @@
+Incoming Mail (POP) Server
+
+Server - pop.mail.yahoo.com
+Port - 995
+Requires SSL - Yes
+Outgoing Mail (SMTP) Server
+
+Server - smtp.mail.yahoo.com
+Port - 465 or 587
+Requires SSL - Yes
+Requires TLS - Yes (if available)
+Requires authentication - Yes
+Your login info
+
+Email address - Your full email address (name@domain.com.)
+Password - Your account's password.
+Requires authentication - Yes

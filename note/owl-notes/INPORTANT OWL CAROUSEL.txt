@@ -1,0 +1,8 @@
+.owl-theme .owl-controls .owl-page span {
+    background: #999;
+}
+
+
+
+
+/*LOOK at the Omifa site at owl clients section !!!!!!!!!!!*/
