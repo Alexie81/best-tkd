@@ -15,7 +15,7 @@ demo = {
           tension: 0
         }),
         low: 0,
-        high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+        high: 50, 
         chartPadding: {
           top: 0,
           right: 0,
@@ -47,7 +47,7 @@ demo = {
           tension: 0
         }),
         low: 0,
-        high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+        high: 50, 
         chartPadding: {
           top: 0,
           right: 0,
@@ -76,7 +76,7 @@ demo = {
           tension: 0
         }),
         low: 0,
-        high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+        high: 1000, 
         chartPadding: {
           top: 0,
           right: 0,
@@ -135,7 +135,7 @@ demo = {
     var mapOptions = {
       zoom: 13,
       center: myLatlng,
-      scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+      scrollwheel: false, 
       styles: [{
         "featureType": "water",
         "stylers": [{
