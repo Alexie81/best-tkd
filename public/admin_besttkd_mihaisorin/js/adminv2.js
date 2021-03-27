@@ -21,3 +21,7 @@ var firebaseConfig = {
         window.location = "../index.html";
     }
 });
+
+function logout(){
+    auth.signOut();
+  }
