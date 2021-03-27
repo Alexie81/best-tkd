@@ -127,7 +127,43 @@ demo = {
 
       //start animation for the Emails Subscription Chart
       md.startAnimationForBarChart(websiteViewsChart);
+
+
     }
+  },
+
+
+    //   initVizitatoriCharts:  function() {
+    //     if ($('#dailySalesChartviz').length != 0) {
+    //   dataDailySalesChartviz = {
+    //     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    //     series: [
+    //       [12, 17, 7, 17, 23, 18, 38]
+    //     ]
+    //   };
+
+    //   optionsDailySalesChartviz = {
+    //     lineSmooth: Chartist.Interpolation.cardinal({
+    //       tension: 0
+    //     }),
+    //     low: 0,
+    //     high: 50, 
+    //     chartPadding: {
+    //       top: 0,
+    //       right: 0,
+    //       bottom: 0,
+    //       left: 0
+    //     },
+    //   }
+
+    //   var dailySalesChartviz = new Chartist.Line('#dailySalesChartviz', dataDailySalesChartviz, optionsDailySalesChartviz);
+
+    //   md.startAnimationForLineChart(dailySalesChartviz);
+    //   //END
+    // }
+
+
+    // },
   }//,
 
   // initGoogleMaps: function() {
@@ -232,6 +268,6 @@ demo = {
 
   //   // // To add the marker to the map, call setMap();
   //   // marker.setMap(map);
-  // }
+  // 
 
-}
+
