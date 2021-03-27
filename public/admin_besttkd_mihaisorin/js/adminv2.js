@@ -112,7 +112,7 @@ function logout(){
   var tot1 = new Chartist.Line('.ct-chart-viztot', dataDailySalesChartviztot, optionsDailySalesChartviztot);
   var viz2 = new Chartist.Line('.ct-chart-viz2', dataDailySalesChartviz2, optionsDailySalesChartviz2);
   var viz3 = new Chartist.Line('.ct-chart-viz3', dataDailySalesChartviz3, optionsDailySalesChartviz3);
-  md.startAnimationForBarChart(viz1);
-  md.startAnimationForBarChart(viz2);
-  md.startAnimationForBarChart(viz3);
-  md.startAnimationForBarChart(tot1);
+  md.startAnimationForLineChart(viz1);
+  md.startAnimationForLineChart(viz2);
+  md.startAnimationForLineChart(viz3);
+  md.startAnimationForLineChart(tot1);

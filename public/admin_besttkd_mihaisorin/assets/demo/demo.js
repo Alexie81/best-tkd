@@ -271,3 +271,11 @@ demo = {
   // 
 
 
+function check_coll() {
+  setTimeout(function(){
+  var h = document.body.clientHeight * 2;
+  var conct = String(h+'px')
+  document.getElementsByClassName('close-layer')[0].style.height = conct;
+  console.log(conct)
+});
+}

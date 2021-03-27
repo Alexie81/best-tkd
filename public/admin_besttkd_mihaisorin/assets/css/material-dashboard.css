@@ -17511,7 +17511,34 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.bg-info,
 .card.card-rotate.bg-info .front,
 .card.card-rotate.bg-info .back {
-  background: linear-gradient(60deg, #26c6da, #00acc1);
+  background: linear-gradient(60deg, #84d9e4, #0098ac);
+}
+
+.card .card-header-info1 .card-icon,
+.card .card-header-info1 .card-text,
+.card .card-header-info1:not(.card-header-icon):not(.card-header-text),
+.card.bg-info,
+.card.card-rotate.bg-info .front,
+.card.card-rotate.bg-info .back {
+  background: linear-gradient(60deg, #89c9ee, #2561af);
+}
+
+.card .card-header-info2 .card-icon,
+.card .card-header-info2 .card-text,
+.card .card-header-info2:not(.card-header-icon):not(.card-header-text),
+.card.bg-info,
+.card.card-rotate.bg-info .front,
+.card.card-rotate.bg-info .back {
+  background: linear-gradient(60deg, #9cb3d3, #0045a0);
+}
+
+.card .card-header-info3 .card-icon,
+.card .card-header-info3 .card-text,
+.card .card-header-info3:not(.card-header-icon):not(.card-header-text),
+.card.bg-info,
+.card.card-rotate.bg-info .front,
+.card.card-rotate.bg-info .back {
+  background: linear-gradient(60deg, #7772a7, #4225c4);
 }
 
 .card .card-header-success .card-icon,
@@ -17579,6 +17606,12 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card .card-header-info .card-text {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
 }
+
+/* .card .card-header-info1 .card-icon,
+.card .card-header-info1:not(.card-header-icon):not(.card-header-text),
+.card .card-header-info1 .card-text {
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 159, 180, 0.4);
+} */
 
 .card .card-header-success .card-icon,
 .card .card-header-success:not(.card-header-icon):not(.card-header-text),
@@ -19223,8 +19256,9 @@ Copyright (c) 2015 Daniel Eden
     right: -50px;
   }
 
+
   .close-layer {
-    height: 520%;
+    height: 100%;
     width: 100%;
     position: absolute;
     opacity: 0;
@@ -19749,4 +19783,12 @@ background-color: transparent;
 }
 .card-header-success::selection{
 background-color: transparent;
+}
+#no-gallery-two:active{
+  background-color: #fff !important;
+  color: #000 !important;
+}
+#no-gallery-one:active{
+  background-color: #fff !important;
+  color: #000 !important;
 }
