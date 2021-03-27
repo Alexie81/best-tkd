@@ -19744,3 +19744,9 @@ Copyright (c) 2015 Daniel Eden
 .dropdown-item{
   box-shadow: none !important;
 }
+.card::selection{
+background-color: transparent;
+}
+.card-header-success::selection{
+background-color: transparent;
+}
