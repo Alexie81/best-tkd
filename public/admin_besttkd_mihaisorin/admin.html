@@ -6,6 +6,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../img/favicon/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" type="css/text" href="css/amimate/animate.css">
   <title>
     Admin - Meniu
   </title>
@@ -29,7 +30,7 @@
       <h4 align="center" style="height: 20px; margin-top: 5px !important;">AdminPanel</h4>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
+        <ul class="nav wow animated zoomIn">
           <li class="nav-item active" style="pointer-events: none;">
             <a class="nav-link" href="admin.html">
               <i class="material-icons">dashboard</i>
@@ -364,6 +365,8 @@
 
   <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
 
+  <script type="text/javascript" src="js/wow/wow.min.js"></script>
+
   <script type="text/javascript" src="js/admin.js"></script>
 
   <script src="assets/demo/demo.js"></script>
@@ -557,6 +560,13 @@
 
       md.initDashboardPageCharts();
 
+    });
+  </script>
+  <script>
+    $(function () {
+
+  // animate on scroll
+    new WOW().init();
     });
   </script>
 </body>
