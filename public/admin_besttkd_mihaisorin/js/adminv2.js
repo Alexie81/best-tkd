@@ -87,31 +87,126 @@ function logout(){
       left: 0
     },
   }
-  dataDailySalesChartviz3 = {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+
+
+  var dataviz3 = {
+    labels: ["Mon", "Tue", "Wed"],
     series: [
-      [12, 17, 7, 17, 23, 18, 38]
+      [10, 20, 75]
+    ],
+  }
+  
+  var optionsviz3 = {
+    low: 0,
+    high: 100,
+    showGridBackground: false,
+    axisX: {
+      showGrid: true
+    },
+    axisY: {},
+    plugins: [
+      Chartist.plugins.ctPointLabels({
+        textAnchor: 'middle',
+        labelInterpolationFnc: function(value) {
+          return  value
+        }
+      }),
+      Chartist.plugins.tooltip({
+  
+      })
+    ]
+  };
+  
+  var dataviz1 = {
+    labels: ["Mon", "Tue", "Wed"],
+    series: [
+      [10, 20, 75]
+    ],
+  }
+  
+  var optionsviz1 = {
+    low: 0,
+    high: 100,
+    showGridBackground: false,
+    axisX: {
+      showGrid: true
+    },
+    axisY: {},
+    plugins: [
+      Chartist.plugins.ctPointLabels({
+        textAnchor: 'middle',
+        labelInterpolationFnc: function(value) {
+          return  value
+        }
+      }),
+      Chartist.plugins.tooltip({
+  
+      })
     ]
   };
 
-  optionsDailySalesChartviz3 = {
-    lineSmooth: Chartist.Interpolation.cardinal({
-      tension: 0
-    }),
-    low: 0,
-    high: 50, 
-    chartPadding: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0
-    },
+  var dataviztot = {
+    labels: ["Mon", "Tue", "Wed"],
+    series: [
+      [10, 20, 75]
+    ],
   }
   
-  var viz1 = new Chartist.Line('.ct-chart-viz1', dataDailySalesChartviz1, optionsDailySalesChartviz1);
-  var tot1 = new Chartist.Line('.ct-chart-viztot', dataDailySalesChartviztot, optionsDailySalesChartviztot);
-  var viz2 = new Chartist.Line('.ct-chart-viz2', dataDailySalesChartviz2, optionsDailySalesChartviz2);
-  var viz3 = new Chartist.Line('.ct-chart-viz3', dataDailySalesChartviz3, optionsDailySalesChartviz3);
+  var optionsviztot = {
+    low: 0,
+    high: 100,
+    showGridBackground: false,
+    axisX: {
+      showGrid: true
+    },
+    axisY: {},
+    plugins: [
+      Chartist.plugins.ctPointLabels({
+        textAnchor: 'middle',
+        labelInterpolationFnc: function(value) {
+          return  value
+        }
+      }),
+      Chartist.plugins.tooltip({
+  
+      })
+    ]
+  };
+
+  var dataviz2 = {
+    labels: ["Mon", "Tue", "Wed"],
+    series: [
+      [10, 20, 75]
+    ],
+  }
+  
+  var optionsviz2 = {
+    low: 0,
+    high: 100,
+    showGridBackground: false,
+    axisX: {
+      showGrid: true
+    },
+    axisY: {},
+    plugins: [
+      Chartist.plugins.ctPointLabels({
+        textAnchor: 'middle',
+        labelInterpolationFnc: function(value) {
+          return  value
+        }
+      }),
+      Chartist.plugins.tooltip({
+  
+      })
+    ]
+  };
+  
+  var viz1 = new Chartist.Line('.ct-chart-viz1', dataviz1, optionsviz1);
+  var tot1 = new Chartist.Line('.ct-chart-viztot', dataviztot, optionsviztot);
+  var viz2 = new Chartist.Line('.ct-chart-viz2', dataviz2, optionsviz2);
+  var viz3 = new Chartist.Line('.ct-chart-viz3', dataviz3, optionsviz3);
+
+  
   md.startAnimationForLineChart(viz1);
   md.startAnimationForLineChart(viz2);
   md.startAnimationForLineChart(viz3);
