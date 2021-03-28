@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
   <meta charset="utf-8" />
@@ -7,28 +7,28 @@
   <link rel="icon" type="image/png" href="../../img/favicon/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Admin - Notificari
+    Admin - Galerie
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-  
+
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  
+
   <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-  
+
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-    
-    
-  
- 
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a></div>
+
+      <div class="logo"><a style="color: rgba(0, 65, 179, .6);" href="../../index.html" class="simple-text logo-normal"><b>
+        Best Taekwondo
+      </b>
+      </a>
+    <h4 align="center" style="height: 20px; margin-top: 5px !important;">AdminPanel</h4>
+    </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
             <li class="nav-item">
@@ -43,7 +43,7 @@
                 <p>Admin</p>
               </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link" href="galerie.html">
                 <i class="material-icons">bubble_chart</i>
                 <p>Galerie</p>
@@ -67,7 +67,7 @@
                 <p>Harta</p>
               </a>
             </li>
-            <li class="nav-item active" style="pointer-events: none;">
+            <li class="nav-item  active" style="pointer-events: none;">
               <a class="nav-link" href="notifications.html">
                 <i class="material-icons">notifications</i>
                 <p>Notificari</p>
@@ -81,7 +81,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Notifications</a>
+            <a class="navbar-brand" href="javascript:;">Notificari</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;right: 0 !important;">
             <span class="sr-only">Toggle navigation</span>
@@ -104,7 +104,7 @@
                 <a class="nav-link" href="../admin.html">
                   <i class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
-                    Stats
+                    Meniu Principal
                   </p>
                 </a>
               </li>
@@ -113,7 +113,7 @@
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
-                    Some Actions
+                    Notificari
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -128,14 +128,14 @@
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
-                    Account
+                    Cont
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="user.html"><i style="margin-right: 15px;" class="material-icons">person</i> Profil </a>
+                  <a class="dropdown-item" href="#"><i style="margin-right: 15px;" class="material-icons">settings</i> Setari </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" onclick="logout()" href="../../index.html"><i style="margin-right: 15px;" class="material-icons">exit_to_app</i> Iesire </a>
                 </div>
               </li>
             </ul>
@@ -145,137 +145,81 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h3 class="card-title">Notifications</h3>
-              <p class="card-category">Handcrafted by our friend
-                <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
-                <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
-              </p>
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <h4 class="card-title">Notifications Style</h4>
-                  <div class="alert alert-info">
-                    <span>This is a plain notification</span>
-                  </div>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>This is a notification with close button.</span>
-                  </div>
-                  <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon.</span>
-                  </div>
-                  <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                  </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info1">
+                  <h3 align="center"><i class="material-icons" style="font-size: 30px; margin-bottom: -20px !important; height: 55px; vertical-align: middle;">notifications</i> <b>Notificari site</b></h3>
                 </div>
-                <div class="col-md-6">
-                  <h4 class="card-title">Notification states</h4>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Info - </b> This is a regular notification made with ".alert-info"</span>
-                  </div>
-                  <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Success - </b> This is a regular notification made with ".alert-success"</span>
-                  </div>
-                  <div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-                  </div>
-                  <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-                  </div>
-                  <div class="alert alert-primary">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
+                
+                <div class="card-body">
+                  <h4 class="card-title">Toate notificarile site-ului: </h4>
+                  <a class="dropdown-item" href="#" id="no-gallery-one"><i style="margin-right: 15px;" class="material-icons">check</i> Marcheaza ca citit </a>
+                  <br />
+                  <!-- <p class="card-category">
+                    Numar clicuri din ultimele 24 de ore</p> -->
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">notifications</i> Notificari site: <a href="https://best-tkd.ro" style="margin-left: 5px;"> Best Taekwondo</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="places-buttons">
-                <div class="row">
-                  <div class="col-md-6 ml-auto mr-auto text-center">
-                    <h4 class="card-title">
-                      Notifications Places
-                      <p class="category">Click to view notifications</p>
-                    </h4>
-                  </div>
+
+
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-info1">
+                  <h3 align="center"><i class="material-icons" style="font-size: 30px; margin-bottom: -20px !important; height: 55px; vertical-align: middle;">announcement</i> <b>Notificari AdminPanel</b></h3>
                 </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','left')">Top Left</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','center')">Top Center</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div class="card-body">
+                  <h4 class="card-title">Toate notificarile AdminPanel: </h4>
+                  <a class="dropdown-item" href="#" id="no-gallery-one"><i style="margin-right: 15px;" class="material-icons">check</i> Marcheaza ca citit </a>
+                  <br />
+                  <!-- <p class="card-category">
+                    Numar clicuri din ultimele 24 de ore</p> -->
                 </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','left')">Bottom Left</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','center')">Bottom Center</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','right')">Bottom Right</button>
-                      </div>
-                    </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">announcement</i> AdminPanel: <a href="https://best-tkd.ro/admin_besttkd_mihaisorin" style="margin-left: 5px;"> AdminPanel - Best Taekwondo</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-     
+
+
+
+            <!-- <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <h3 align="center"><i class="material-icons" style="font-size: 30px; margin-bottom: -20px !important; height: 55px; vertical-align: middle;">play_circle_outline</i> <b>Videouri</b></h3>
+                </div>
+                
+                <div class="card-body">
+                  <h4 class="card-title"> Toate videourile: </h4>
+                  <a class="dropdown-item" href="#" id="no-gallery-two"><i style="margin-right: 15px;" class="material-icons">add</i> Adauga video </a>
+                  <br />
+      
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">play_circle_outline</i> Videouri
+                  </div>
+                </div>
+              </div>
+            </div> -->
     </div>
   </div>
+</div>
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
       </a>
       <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
+        <li class="header-title">Culori Meniu</li>
         <li class="adjustments-line">
           <a href="javascript:void(0)" class="switch-trigger active-color">
             <div class="badge-colors ml-auto mr-auto">
@@ -289,7 +233,7 @@
             <div class="clearfix"></div>
           </a>
         </li>
-        <li class="header-title">Images</li>
+        <li class="header-title">Imagine de fundal pentru Meniu</li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
             <img src="../assets/img/sidebar-1.jpg" alt="">
@@ -311,23 +255,9 @@
           </a>
         </li>
         <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
+          <a href="../../cookie/politica_cookies.html" target="_blank" class="btn btn-default btn-block">
+            Vizualizeala politica cookies
           </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
         </li>
       </ul>
     </div>
@@ -339,13 +269,13 @@
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   
   <script src="../assets/js/plugins/moment.min.js"></script>
- 
+  
   <script src="../assets/js/plugins/sweetalert2.js"></script>
- 
+  
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
-  
+ 
   <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  
+ 
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
  
   <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
@@ -369,13 +299,13 @@
    <!--FIREBASE-->
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
  
-  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!-- <script src="../assets/js/plugins/chartist.min.js"></script> -->
  
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  
+ 
   <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
 
-  <script type="text/javascript" src="../js/adminv2.js"></script>
+  <script type="text/javascript" src="../js/adminv3.js"></script>
  
   <script src="../assets/demo/demo.js"></script>
   <script>
@@ -540,19 +470,13 @@
             window.dispatchEvent(new Event('resize'));
           }, 180);
 
-         
+          
           setTimeout(function() {
             clearInterval(simulateWindowResize);
           }, 1000);
 
         });
       });
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      //init DateTimePickers
-      md.initFormExtendedDatetimepickers();
     });
   </script>
 </body>
