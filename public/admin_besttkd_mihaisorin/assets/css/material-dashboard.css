@@ -18038,6 +18038,11 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card-product .card-body+.card-footer {
   border-top: 1px solid #eee;
 }
+/* rgb(76 175 80 / 40%) */
+.card-chart .card-body+.card-footer1,
+.card-product .card-body+.card-footer1 {
+  border-top: 1px solid rgb(76 175 80 / 40%);
+}
 
 .card-product .price {
   color: inherit;
