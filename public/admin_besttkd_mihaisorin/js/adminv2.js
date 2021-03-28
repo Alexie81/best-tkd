@@ -145,33 +145,33 @@ function logout(){
     ]
   };
 
-  var dataviztot = {
-    labels: ["Mon", "Tue", "Wed"],
-    series: [
-      [10, 20, 75]
-    ],
-  }
+  // var dataviztot = {
+  //   labels: ["Mon", "Tue", "Wed"],
+  //   series: [
+  //     [10, 20, 75]
+  //   ],
+  // }
   
-  var optionsviztot = {
-    low: 0,
-    high: 100,
-    showGridBackground: false,
-    axisX: {
-      showGrid: true
-    },
-    axisY: {},
-    plugins: [
-      Chartist.plugins.ctPointLabels({
-        textAnchor: 'middle',
-        labelInterpolationFnc: function(value) {
-          return  value
-        }
-      }),
-      Chartist.plugins.tooltip({
+  // var optionsviztot = {
+  //   low: 0,
+  //   high: 100,
+  //   showGridBackground: false,
+  //   axisX: {
+  //     showGrid: true
+  //   },
+  //   axisY: {},
+  //   plugins: [
+  //     Chartist.plugins.ctPointLabels({
+  //       textAnchor: 'middle',
+  //       labelInterpolationFnc: function(value) {
+  //         return  value
+  //       }
+  //     }),
+  //     Chartist.plugins.tooltip({
   
-      })
-    ]
-  };
+  //     })
+  //   ]
+  // };
 
   var dataviz2 = {
     labels: ["Mon", "Tue", "Wed"],
@@ -200,14 +200,44 @@ function logout(){
       })
     ]
   };
+
+
+  var datavizanant = {
+    labels: ["Mon", "Tue", "Wed"],
+    series: [
+      [10, 20, 75]
+    ],
+  }
+  
+  var optionsvizanant = {
+    low: 0,
+    high: 100,
+    showGridBackground: false,
+    axisX: {
+      showGrid: true
+    },
+    axisY: {},
+    plugins: [
+      Chartist.plugins.ctPointLabels({
+        textAnchor: 'middle',
+        labelInterpolationFnc: function(value) {
+          return  value
+        }
+      }),
+      Chartist.plugins.tooltip({
+  
+      })
+    ]
+  };
   
   var viz1 = new Chartist.Line('.ct-chart-viz1', dataviz1, optionsviz1);
-  var tot1 = new Chartist.Line('.ct-chart-viztot', dataviztot, optionsviztot);
+  // var tot1 = new Chartist.Line('.ct-chart-viztot', dataviztot, optionsviztot);
   var viz2 = new Chartist.Line('.ct-chart-viz2', dataviz2, optionsviz2);
   var viz3 = new Chartist.Line('.ct-chart-viz3', dataviz3, optionsviz3);
+  var vizanant = new Chartist.Line('.ct-chart-vizanant', datavizanant, optionsvizanant);
 
   
   md.startAnimationForLineChart(viz1);
   md.startAnimationForLineChart(viz2);
   md.startAnimationForLineChart(viz3);
-  md.startAnimationForLineChart(tot1);
+  // md.startAnimationForLineChart(tot1);

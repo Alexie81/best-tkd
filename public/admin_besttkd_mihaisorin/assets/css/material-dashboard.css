@@ -17541,6 +17541,15 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   background: linear-gradient(60deg, #7772a7, #4225c4);
 }
 
+.card .card-header-info4 .card-icon,
+.card .card-header-info4 .card-text,
+.card .card-header-info4:not(.card-header-icon):not(.card-header-text),
+.card.bg-info,
+.card.card-rotate.bg-info .front,
+.card.card-rotate.bg-info .back {
+  background: linear-gradient(60deg, #b7b1ee, #301b8d);
+}
+
 .card .card-header-success .card-icon,
 .card .card-header-success .card-text,
 .card .card-header-success:not(.card-header-icon):not(.card-header-text),
