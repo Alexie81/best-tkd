@@ -17559,6 +17559,42 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   background: linear-gradient(60deg, #66bb6a, #43a047);
 }
 
+.card .card-header-success1 .card-icon,
+.card .card-header-success1 .card-text,
+.card .card-header-success1:not(.card-header-icon):not(.card-header-text),
+.card.bg-success,
+.card.card-rotate.bg-success .front,
+.card.card-rotate.bg-success .back {
+  background: linear-gradient(60deg, #66b96a,#03ce0a );
+}
+
+.card .card-header-success2 .card-icon,
+.card .card-header-success2 .card-text,
+.card .card-header-success2:not(.card-header-icon):not(.card-header-text),
+.card.bg-success,
+.card.card-rotate.bg-success .front,
+.card.card-rotate.bg-success .back {
+  background: linear-gradient(60deg, #00c753, #147717);
+}
+
+.card .card-header-success3 .card-icon,
+.card .card-header-success3 .card-text,
+.card .card-header-success3:not(.card-header-icon):not(.card-header-text),
+.card.bg-success,
+.card.card-rotate.bg-success .front,
+.card.card-rotate.bg-success .back {
+  background: linear-gradient(60deg, #00c975, #007427);
+}
+
+.card .card-header-success4 .card-icon,
+.card .card-header-success4 .card-text,
+.card .card-header-success4:not(.card-header-icon):not(.card-header-text),
+.card.bg-success,
+.card.card-rotate.bg-success .front,
+.card.card-rotate.bg-success .back {
+  background: linear-gradient(60deg, #009952, #003f1c);
+}
+
 .card .card-header-warning .card-icon,
 .card .card-header-warning .card-text,
 .card .card-header-warning:not(.card-header-icon):not(.card-header-text),
