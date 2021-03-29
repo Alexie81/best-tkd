@@ -72,4 +72,56 @@ $(function () {
 
 $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
+})
+
+$(function(){
+var text_initial = document.getElementById('max-206').innerHTML;
+var text_new = null;
+var myDiv = document.getElementById('max-206').innerHTML;
+var newlength = 230;
+var sumL =  null;
+myDiv = document.getElementById('max-206').innerHTML.length;
+if(myDiv => newlength){
+console.log("Este mai mare");
+sumL = myDiv - newlength;
+text_new = text_initial.substring(0,newlength);
+console.log(text_new)
+document.getElementById('max-206').innerHTML = text_new;
+} else {
+
+}
 });
+
+
+//Separate functions for text
+
+//All variables what i need for the text limiter
+var text_initial = document.getElementById('max-206').innerHTML;
+//End variables
+
+//Now, let's condition all text from page :)
+
+//First text => max 230
+function max_230(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max-206').innerHTML;
+var newlength = 230;
+var sumL =  null;
+myDiv = document.getElementById('max-206').innerHTML.length;
+if(myDiv > newlength){
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+text_new = text_initial.substring(-1,newlength);
+//console.log(text_new)
+document.getElementById('max-206').innerHTML = text_new;
+return false;
+} else {
+
+}
+} else{
+
+}
+}
+//End First Text
