@@ -113,7 +113,7 @@ myDiv = document.getElementById('max-206').innerHTML.length;
 if(myDiv > newlength){
 //console.log("Este mai mare");
 sumL = myDiv - newlength;
-text_new = text_initial.substring(-1,newlength);
+text_new = text_initial.substring(0,newlength);
 //console.log(text_new)
 document.getElementById('max-206').innerHTML = text_new;
 return false;
