@@ -81,6 +81,10 @@
 
     auth.signOut();
 
+    // window.addEventListener("beforeunload", function (e) {
+    //     auth.signOut();
+    // });
+
     //console.log("acum e acii!");
     if(email.value != "" && password.value != ""){
         //console.log("agaaaaain");

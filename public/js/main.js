@@ -74,54 +74,484 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 })
 
+function simulateKeyPress(character) {
+      jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
+    }
+
 $(function(){
-var text_initial = document.getElementById('max-206').innerHTML;
+var text_initial = document.getElementById('max-206').innerText;
 var text_new = null;
-var myDiv = document.getElementById('max-206').innerHTML;
-var newlength = 230;
+var myDiv = document.getElementById('max-206').innerText;
+var newlength = 220;
 var sumL =  null;
-myDiv = document.getElementById('max-206').innerHTML.length;
+myDiv = document.getElementById('max-206').innerText.length;
 if(myDiv => newlength){
-console.log("Este mai mare");
+//console.log("Este mai mare");
 sumL = myDiv - newlength;
 text_new = text_initial.substring(0,newlength);
-console.log(text_new)
-document.getElementById('max-206').innerHTML = text_new;
+//console.log(text_new)
+document.getElementById('max-206').innerText = text_new;
 } else {
 
 }
 });
 
 
-//Separate functions for text
+//$(function(){
+//var text_initial1 = document.getElementById('max_70').innerText;
+//var text_new = null;
+//var myDiv = document.getElementById('max_70').innerText;
+//var newlength = 70;
+//var sumL =  null;
+//myDiv = document.getElementById('max_70').innerText.length;
+//if(myDiv => newlength){
+////console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial1.substring(0,newlength);
+////console.log(text_new)
+//document.getElementById('max_70').innerText = text_new;
+//} else {
+//
+//}
+//});
 
-//All variables what i need for the text limiter
-var text_initial = document.getElementById('max-206').innerHTML;
+
+//Separate functions for text
+//function max_230(selector, maxLength) {
+//    var element = document.querySelector(selector),
+//        truncated = element.innerText;
+//
+//    if (truncated.length > maxLength) {
+//        truncated = truncated.substr(0,maxLength) + '...';
+//    }
+//    return truncated;
+//}
+////All variables what i need for the text limiter
+//document.querySelector('p').innerText = truncateText('p', 107);
+var title_initial = document.getElementById('title_change').innerText;
+var title_main_initial = document.getElementById('title_main_h1').innerText;
+var text_initial = document.getElementById('max-206').innerText;
+var text_initial1 = document.getElementById('max_70').innerText;
+var text_initial2 = document.getElementById('max_55').innerText;
+var text_initial3 = document.getElementById('max_56').innerText;
+var text_initial4 = document.getElementById('max_57').innerText;
+var text_initial5 = document.getElementById('max_256').innerText;
+var text_initial6 = document.getElementById('max_211').innerText;
+var text_initial7 = document.getElementById('max_102').innerText;
+var text_initial_gen = null;
+var title_initial_gen = null;
 //End variables
 
 //Now, let's condition all text from page :)
 
-//First text => max 230
-function max_230(event){
+
+//TITLE
+//=>MAX 14 FOR P no FOR H1
+function title_no_modify(event){
 var keycode = (event.which) ? event.which : event.keyCode;
 if(keycode !== 8){
 var text_new = null;
-var myDiv = document.getElementById('max-206').innerHTML;
-var newlength = 230;
+var myDiv = document.getElementById('title_change').innerText;
+var newlength = 14;
 var sumL =  null;
-myDiv = document.getElementById('max-206').innerHTML.length;
-if(myDiv > newlength){
-//console.log("Este mai mare");
-sumL = myDiv - newlength;
-text_new = text_initial.substring(0,newlength);
-//console.log(text_new)
-document.getElementById('max-206').innerHTML = text_new;
-return false;
-} else {
-
+myDiv = document.getElementById('title_change').innerText.length;
+if(myDiv == newlength){
+title_initial = document.getElementById('title_change').innerText;
 }
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial.substring(0,newlength);
+//console.log(text_new)
+setTimeout(function(){document.getElementById('title_change').innerText = title_initial;}, 100);
 } else{
 
 }
+} else{
+}
+}
+
+
+// =>MAX 14 with p element after title_main_initial
+function title_no_modify1(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('title_main_h1').innerText;
+var newlength = 14;
+var sumL =  null;
+myDiv = document.getElementById('title_main_h1').innerText.length;
+if(myDiv == newlength){
+title_main_initial = document.getElementById('title_main_h1').innerText;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial.substring(0,newlength);
+//console.log(text_new)
+var conct_all = title_main_initial + '<p id="title_change" onkeydown="title_no_modify(event)" style="text-transform: uppercase;">Best TaeKwondo</p>';
+conct_all = conct_all.substring(0, 29);
+setTimeout(function(){document.getElementById('title_main_h1').innerHTML = conct_all;}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//END TITLE
+
+//First text => max 230
+function max_220(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max-206').innerText;
+var newlength = 220;
+var sumL =  null;
+myDiv = document.getElementById('max-206').innerText.length;
+if(myDiv == newlength){
+text_initial = document.getElementById('max-206').innerText;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial.substring(0,newlength);
+//console.log(text_new)
+setTimeout(function(){document.getElementById('max-206').innerText = text_initial;}, 100);
+} else{
+
+}
+} else{
+}
 }
 //End First Text
+
+
+//2ND TEXT => max 70
+
+
+function max_70(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_70').innerText;
+var newlength = 70;
+var sumL =  null;
+myDiv = document.getElementById('max_70').innerText.length;
+if(myDiv == newlength){
+text_initial1 = document.getElementById('max_70').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+text_new = text_initial1.substring(0,newlength);
+//console.log(text_new)
+document.getElementById('max_70').innerText = text_new;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+setTimeout(function(){document.getElementById('max_70').innerText = text_initial1;}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//End 2ND Text
+
+
+
+//3RD TEXT => max 70
+
+
+function max_55(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_55').innerText;
+var newlength = 70;
+var sumL =  null;
+myDiv = document.getElementById('max_55').innerText.length;
+if(myDiv == newlength){
+text_initial2 = document.getElementById('max_55').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_55').innerText = text_initial2;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+setTimeout(function(){console.log(text_initial2)}, 200);
+var text_conct1_final = text_initial2.substring(3, newlength)
+setTimeout(function(){document.getElementById('max_55').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">TAE</strong>' + text_conct1_final}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//End 3RD Text
+
+
+//4TH TEXT => max 70
+
+
+function max_56(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_56').innerText;
+var newlength = 70;
+var sumL =  null;
+myDiv = document.getElementById('max_56').innerText.length;
+if(myDiv == newlength){
+text_initial3 = document.getElementById('max_56').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_56').innerText = text_initial3;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+setTimeout(function(){console.log(text_initial3)}, 200);
+var text_conct1_final = text_initial3.substring(4, newlength)
+setTimeout(function(){document.getElementById('max_56').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">KWON</strong>' + text_conct1_final}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//End 4TH Text
+
+
+//5TH TEXT => max 40
+
+
+function max_57(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_57').innerText;
+var newlength = 40;
+var sumL =  null;
+myDiv = document.getElementById('max_57').innerText.length;
+if(myDiv == newlength){
+text_initial4 = document.getElementById('max_57').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_57').innerText = text_initial4;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+setTimeout(function(){console.log(text_initial4)}, 200);
+var text_conct1_final = text_initial4.substring(2, newlength)
+setTimeout(function(){document.getElementById('max_57').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">DO</strong>' + text_conct1_final}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//End 5TH Text
+
+
+
+//6TH TEXT => max 256 {
+
+function max_256(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_256').innerText;
+var newlength = 256;
+var sumL =  null;
+myDiv = document.getElementById('max_256').innerText.length;
+if(myDiv == newlength){
+text_initial5 = document.getElementById('max_256').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_256').innerText = text_initial5;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+//setTimeout(function(){console.log(text_initial4)}, 200);
+//var text_conct1_final = text_initial4.substring(2, newlength)
+setTimeout(function(){document.getElementById('max_256').innerHTML = text_initial5}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//} End 6TH Text
+
+
+//7TH TEXT => max 211 {
+
+function max_211(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_211').innerText;
+var newlength = 211;
+var sumL =  null;
+myDiv = document.getElementById('max_211').innerText.length;
+if(myDiv == newlength){
+text_initial6 = document.getElementById('max_211').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_211').innerText = text_initial6;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+//setTimeout(function(){console.log(text_initial4)}, 200);
+//var text_conct1_final = text_initial4.substring(2, newlength)
+setTimeout(function(){document.getElementById('max_211').innerHTML = text_initial6}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//} End 7TH Text
+
+
+//8TH TEXT => max 102 {
+
+function max_102(event){
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById('max_102').innerText;
+var newlength = 102;
+var sumL =  null;
+myDiv = document.getElementById('max_102').innerText.length;
+if(myDiv == newlength){
+text_initial7 = document.getElementById('max_102').innerText;
+//console.log("Este mai mare");
+sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength - 1);
+//console.log(text_new)
+document.getElementById('max_102').innerText = text_initial7;
+}
+if(myDiv >= newlength){
+//console.log("Este mai mare");
+//sumL = myDiv - newlength;
+//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
+//text_new = text_initial2.substring(2, text_initial2.length+1);
+//setTimeout(function(){console.log(text_initial4)}, 200);
+//var text_conct1_final = text_initial4.substring(2, newlength)
+setTimeout(function(){document.getElementById('max_102').innerHTML = text_initial7}, 100);
+} else{
+
+}
+} else{
+}
+}
+
+//} End 8TH Text
+
+
+//GENERIC FUNCTION FOR ALL TEXTS WITH PARAMETERS
+function max_generic(event, elementId, max_gen_number){
+//event = event.keyCode
+//elementId = id for element
+//max_gen_number = max number of characters
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+var text_new = null;
+var myDiv = document.getElementById(elementId).innerText;
+var newlength = max_gen_number;
+myDiv = document.getElementById(elementId).innerText.length;
+if(myDiv == newlength){
+text_initial_gen = document.getElementById(elementId).innerText;
+document.getElementById(elementId).innerText = text_initial_gen;
+}
+if(myDiv >= newlength){
+setTimeout(function(){document.getElementById(elementId).innerHTML = text_initial_gen}, 100);
+} else{}
+
+} else{}
+
+}
+//END GENERIC FUNCTION
+
+
+
+//GENERIC FUNCTION FOR ALL TITLES WITH PARAMETERS
+function max_title_generic(event, elementId, max_gen_number, title, color_title, status, elementType){
+//event   (no type)    = event.keyCode
+//elementId   (string)    = id for element
+//max_gen_number   (integer)    = max number of characters
+//title   (string)    = id of text who is in title, or element
+//color_title   (string)    = color of title text
+//status   (string)    = after / before
+//elementType   (string)    = type of element who is in title with id=id{mp1-look generic}
+var keycode = (event.which) ? event.which : event.keyCode;
+if(keycode !== 8){
+
+//Variables
+var text_new = null;
+var myDiv = document.getElementById(elementId).innerText;
+var newlength = max_gen_number;
+var final_generic_concatenate_text_with_element = null;
+var title_text_for_generic_concatenate = title;
+//End
+
+myDiv = document.getElementById(elementId).innerText.length;
+if(myDiv == newlength){
+title_initial_gen = document.getElementById(elementId).innerText;
+document.getElementById(elementId).innerText = title_initial_gen;
+}
+if(myDiv >= newlength){
+if(status === "after"){
+final_generic_concatenate_text_with_element = title_initial_gen + "<"+elementType+" style='color:"+color_title+"'>"+title_text_for_generic_concatenate+"</"+elementType+">";
+setTimeout(function(){document.getElementById(elementId).innerHTML = final_generic_concatenate_text_with_element}, 100);
+} else if(status === "before") {
+final_generic_concatenate_text_with_element = "<"+elementType+" style='color:"+color_title+"'>"+title_text_for_generic_concatenate+"</"+elementType+">" + title_initial_gen;
+setTimeout(function(){document.getElementById(elementId).innerHTML = final_generic_concatenate_text_with_element}, 100);
+} else {
+//Nothing
+}
+
+} else{
+//Nothing
+}
+
+} else{
+//Nothing
+}
+
+}
+//END GENERIC_TITLES FUNCTION
+
+

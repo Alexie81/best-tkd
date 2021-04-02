@@ -25,3 +25,7 @@ var firebaseConfig = {
 function logout(){
     auth.signOut();
   }
+
+// window.addEventListener("beforeunload", function (e) {
+//     logout();
+// });

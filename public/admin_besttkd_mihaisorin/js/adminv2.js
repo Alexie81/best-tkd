@@ -26,6 +26,10 @@ function logout(){
     auth.signOut();
   }
 
+//   window.addEventListener("beforeunload", function (e) {
+//     logout();
+// });
+
   dataDailySalesChartviz1 = {
     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
     series: [

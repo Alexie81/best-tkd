@@ -1,0 +1,584 @@
+.mfp-zoom-in .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+    transform: scale(0.8);
+    opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-newspaper .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.5s;
+    transform: scale(0) rotate(500deg);
+}
+.mfp-newspaper.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.mfp-newspaper.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+.mfp-newspaper.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-newspaper.mfp-removing .mfp-with-anim {
+    transform: scale(0) rotate(500deg);
+    opacity: 0;
+}
+.mfp-newspaper.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-move-horizontal .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-50px);
+}
+.mfp-move-horizontal.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s;
+}
+.mfp-move-horizontal.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: translateX(0);
+}
+.mfp-move-horizontal.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-move-horizontal.mfp-removing .mfp-with-anim {
+    transform: translateX(50px);
+    opacity: 0;
+}
+.mfp-move-horizontal.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-move-from-top .mfp-content {
+    vertical-align: top;
+}
+.mfp-move-from-top .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateY(-100px);
+}
+.mfp-move-from-top.mfp-bg {
+    opacity: 0;
+    transition: all 0.2s;
+}
+.mfp-move-from-top.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mfp-move-from-top.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-move-from-top.mfp-removing .mfp-with-anim {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+.mfp-move-from-top.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-3d-unfold .mfp-content {
+    perspective: 2000px;
+}
+.mfp-3d-unfold .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(-60deg);
+}
+.mfp-3d-unfold.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.mfp-3d-unfold.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+.mfp-3d-unfold.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-3d-unfold.mfp-removing .mfp-with-anim {
+    transform: rotateY(60deg);
+    opacity: 0;
+}
+.mfp-3d-unfold.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-zoom-out .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+}
+.mfp-zoom-out.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.mfp-zoom-out.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    transform: scale(1);
+}
+.mfp-zoom-out.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-zoom-out.mfp-removing .mfp-with-anim {
+    transform: scale(1.3);
+    opacity: 0;
+}
+.mfp-zoom-out.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* text-based popup styling */
+.white-popup {
+height: 900px !important;
+width: 100% !important;
+position: relative;
+background: #FFF;
+padding: 25px;
+width:auto;
+max-width: 400px;
+margin: 0 auto;
+}
+
+
+
+
+
+/*
+
+====== Zoom effect ======
+
+*/
+.mfp-zoom-in {
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+transition: all 0.2s ease-in-out;
+transform: scale(0.8);
+}
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+/*
+
+====== Newspaper effect ======
+
+*/
+.mfp-newspaper {
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+-webkit-transition: all 0.2s ease-in-out;
+transition: all 0.5s;
+
+transform: scale(0) rotate(500deg);
+}
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.5s;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: scale(0) rotate(500deg);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+
+/*
+
+====== Move-horizontal effect ======
+
+*/
+.mfp-move-horizontal {
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+transition: all 0.3s;
+
+transform: translateX(-50px);
+}
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.3s;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: translateX(0);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: translateX(50px);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+/*
+
+====== Move-from-top effect ======
+
+*/
+.mfp-move-from-top {
+
+.mfp-content {
+vertical-align:top;
+}
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+transition: all 0.2s;
+
+transform: translateY(-100px);
+}
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.2s;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+/*
+
+====== 3d unfold ======
+
+*/
+.mfp-3d-unfold {
+
+
+.mfp-content {
+perspective: 2000px;
+}
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+transition: all 0.3s ease-in-out;
+transform-style: preserve-3d;
+transform: rotateY(-60deg);
+}
+
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.5s;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: rotateY(60deg);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+
+
+/*
+
+====== Zoom-out effect ======
+
+*/
+.mfp-zoom-out {
+
+/* start state */
+.mfp-with-anim {
+opacity: 0;
+transition: all 0.3s ease-in-out;
+transform: scale(1.3);
+}
+
+&.mfp-bg {
+opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* animate in */
+&.mfp-ready {
+.mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+&.mfp-bg {
+  opacity: 0.8;
+}
+}
+
+/* animate out */
+&.mfp-removing {
+
+.mfp-with-anim {
+  transform: scale(1.3);
+  opacity: 0;
+}
+&.mfp-bg {
+  opacity: 0;
+}
+
+}
+
+}
+
+
+
+/*
+
+====== "Hinge" close effect ======
+
+*/
+
+@keyframes hinge {
+0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }
+20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }
+40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }
+80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }
+100% { transform: translateY(700px); opacity: 0; }
+}
+
+.hinge {
+animation-duration: 1s;
+animation-name: hinge;
+}
+.mfp-with-fade {
+// before-open state
+.mfp-content,
+&.mfp-bg {
+opacity: 0;
+transition: opacity .5s ease-out;
+}
+// open state
+&.mfp-ready {
+.mfp-content {
+ opacity: 1;
+}
+&.mfp-bg {
+  opacity: 0.8; // background opacity
+}
+}
+
+// closed state
+&.mfp-removing {
+&.mfp-bg {
+  opacity: 0;
+}
+}
+}
+
+
+html,
+body {
+margin:0;
+padding:10px;
+-webkit-backface-visibility:hidden;
+}
+
+.mfp-close-btn-in button{
+color: #fff !important;
+margin-top: -50px;
+}
+
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */

@@ -65,7 +65,15 @@ body {
     vertical-align: middle;
     font-weight: 400;
 }
-#home-cover-title h1 p{
+#home-cover-title h1 p#title_main_h1{
+    color: #fff;
+    height:40px;
+    margin-top:-15px;
+    margin-bottom:0 !important;
+    font-weight: 400;
+}
+#home-cover-title h1 #title_change{
+margin-bottom: 30px;
     color: #fff;
     font-weight: 800;
     font-size: 200%;
