@@ -1,4 +1,5 @@
 
+
 (function ($) {
 
     /*==================================================================
@@ -70,6 +71,7 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  firebase.auth();
   const auth = firebase.auth();
   var currentUser = null;
 
@@ -90,17 +92,16 @@ var firebaseConfig = {
     if(email.value != "" && password.value != ""){
 
         //console.log("agaaaaain");
-        const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-        promise.then(user => {
-                //console.log(user.uid)
+        const promise = firebase.auth().signInWithEmailAndPassword(email.value, password.value);
+        promise 
+        .then(user => {
+                console.log(user.uid)
                 swal({
                     title: 'Logare cu succes !',
                     text: 'Tocmai ati intrat in contul dvs !',
                     icon: 'success',
                     timer: 1500
                 });
-                var days = [ '', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata','Duminica'];
-                var luni = [ 'ian', 'feb', 'mar', 'apr', 'mai', 'iun','iul', 'aug', 'sept', 'oct', 'nov', 'dec'];
                 var t  = new Date();
                 var dayName = days[t.getDay()];
                 var luniName = luni[t.getMonth()];
