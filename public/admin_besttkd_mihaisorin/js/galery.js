@@ -1,6 +1,7 @@
 var storage = firebase.storage();
 var storageRef = firebase.storage().ref();
 var i = 0;
+var currentUrl = null;
 //Start code
 storageRef.child('imagini').listAll().then(function(result){
     result.items.forEach(function(imageRef){
@@ -157,7 +158,7 @@ function delete_nodejs(id){
             setTimeout(function(){window.location  = 'galerie.html'}, 1000)
         } else {return false;}
 }
-
+var Element232 = null;
 function edit_nodejs(editElement){
     var id_edit_main = editElement.id;
     $(".login-register-form-edit").modal();
@@ -166,7 +167,7 @@ function edit_nodejs(editElement){
         //id.img = file_image_edit
         values_edit = edit.val();
         keys_edit = values_edit ? Object.keys(values_edit) : [];
-
+        Element232 = id_edit_main;
         // for(var e = 0; e < keys_edit.length; e++) {
         //     var ke = keys_edit[e];
             var img_url = values_edit[id_edit_main].url;
@@ -180,6 +181,78 @@ function edit_nodejs(editElement){
             document.getElementById('descriere_edit_desc').value = descriere_edit_desc;
         // }
     });
+}
+
+function save_edits_nodejs_firebase(){
+    if(document.getElementById('titlu_edit_desc').value !== "" && document.getElementById('descriere_edit_desc').value !== ""){
+        const ref = firebase.storage().ref();
+        const file = document.querySelector('#file_edit_manager').files[0];
+        // const nameFile = file.name;
+
+        var tit1 = null;
+        var descTd = null;
+        if(file !== undefined){
+        const metadata = {
+          contentType:file.type
+        }
+        const task = storageRef.child("images/"+Element232).put(file, metadata);
+        task
+        .then(snapshot =>snapshot.ref.getDownloadURL())
+        .then(url => {
+            tit1 = document.getElementById('titlu_edit_desc').value;
+            descTd = document.getElementById('descriere_edit_desc').value;
+            currentUrl = url;
+            // var nameFile1 = nameFile.replace(/[&\.\\#,+()$~%'":*?<>{}-]/g,'_');
+        firebase.database().ref('imagini').child(Element232).set({
+            url: url,
+            titlu: tit1,
+            descriere: descTd
+        });
+        setTimeout(function(){window.location  = 'galerie.html'}, 1000)
+        console.log(url)
+        });
+    } else {
+        st1 = storageRef.child('imagini/'+Element232)
+        console.log(st1)
+        tit1 = document.getElementById('titlu_edit_desc').value;
+            descTd = document.getElementById('descriere_edit_desc').value;
+            console.log(currentUrl)
+            // var nameFile1 = nameFile.replace(/[&\.\\#,+()$~%'":*?<>{}-]/g,'_');\
+
+
+
+
+                //UPDATE
+                //UPDATE
+
+
+
+
+
+        firebase.database().ref('imagini').child(Element232).update({
+            titlu: tit1,
+            descriere: descTd
+        });
+        setTimeout(function(){window.location  = 'galerie.html'}, 1000)
+    }
+
+} else {
+        if(document.getElementById('titlu_edit_desc').value === ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Completeaza titlul !',
+            text: '',
+            footer: ''
+          })
+        } else if(document.getElementById('descriere_edit_desc').value === ""){
+            Swal.fire({
+                icon: 'error',
+                title: 'Completeaza descrierea!',
+                text: '',
+                footer: ''
+              })
+        }
+    }
 }
 
 

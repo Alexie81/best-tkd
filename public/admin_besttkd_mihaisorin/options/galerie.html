@@ -467,18 +467,26 @@
               </div>
 
               <div id="after-image-upload">
-                <label class="control-label col-sm-2" for="titlu" style="font-weight: bold;color: black;">Titlu: </label>
+                <div class="col-sm-12" align="center">
+                  <input id="file_edit_manager" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Schimba imaginea</button>
+                  <div class="drag-text" style="display: none;">
+                    <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
+                  </div>
+                </div>
+                <label class="control-label col-sm-2" for="titlu_edit_desc" style="font-weight: bold;color: black;">Titlu: </label>
+                
                   <div class="col-sm-12">
                       <input type="text" class="form-control" id="titlu_edit_desc" placeholder="Descriere titlu">
                   </div>
                   <br />
-                  <label class="control-label col-sm-2" for="descriere" style="font-weight: bold;color: black;">Descriere: </label>
+                  <label class="control-label col-sm-2" for="descriere_edit_desc" style="font-weight: bold;color: black;">Descriere: </label>
                   <div class="col-sm-12">
                       <input type="text" class="form-control" id="descriere_edit_desc" placeholder="Descriere imagine">
                   </div>
                   <br />
                   <div class="col-sm-12" align="center">
-              <button class="file-upload-btn" type="button" onclick="">salveaza</button>
+              <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase()">salveaza</button>
             </div>
               </div>
               
