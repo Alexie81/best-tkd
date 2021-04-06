@@ -127,7 +127,7 @@ MessageRef.once('value', snap => {
 
         var optionHtmlInnerAll = `<li>
         <img src="${url}">
-        <a href="${url}" ><p>${titlu}</p></a>
+        <a data-effect='mfp-3d-unfold' href="${url}" class="openEditImgPopup effect"><p>${titlu}</p></a>
         <div class="editable_buttons">
           <button data-toggle="tooltip" title="Editeaza" id="${nameKey}" onclick="edit_nodejs(this)">
             <i class="material-icons">
@@ -147,6 +147,29 @@ MessageRef.once('value', snap => {
 
         $('#imagini-list').append(optionHtmlInnerAll);
     }
+    $('.openEditImgPopup').magnificPopup({
+        gallery: {
+            enabled: false
+        },
+        image: {
+              cursor: null,
+        },
+        type: 'image',
+        //delay removal by X to allow out-animation
+        removalDelay: 700,
+        callbacks: {
+            beforeOpen: function () {
+                this.st.image.markup = this.st.image.markup.replace('mfp-figure',
+                    'mfp-figure mfp-with-anim');
+                this.st.mainClass = this.st.el.attr('data-effect');
+            }
+        },
+        closeOnContentClick: true,
+        midClick: true
+  
+    });
+
+    
 });
 
 function delete_nodejs(id){
@@ -254,6 +277,8 @@ function save_edits_nodejs_firebase(){
         }
     }
 }
+
+
 
 
 
