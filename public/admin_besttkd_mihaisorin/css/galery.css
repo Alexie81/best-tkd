@@ -1,0 +1,198 @@
+#imagini-list{
+    list-style: none;
+    /* border-style: solid; */
+    width: 98%;
+    padding-left: 0 !important;
+    /* text-align: center; */
+    margin: 0 auto 0 auto;
+    line-height: 1px;
+}
+#imagini-list li{
+    /* SIZE */
+    width: 100%;
+
+    /* BORDER */
+    border-style: solid;
+    border-radius: 4px;
+    border-width: .7px;
+    border-color: #328636; 
+
+    /* PADDING */
+    padding-top: 0 !important;
+
+    /* TRANSITION */
+    transition: .3s ease-in-out;
+
+    /* MARGIN */
+    margin-top: 10px;
+
+    /* HEIGHT */
+    height: 35px;
+}
+/* HOVER */
+#imagini-list li:hover{
+    background-color: rgba(243, 243, 243, .5);
+}
+#imagini-list li:hover img{
+    background-color: rgba(243, 243, 243, .9);
+}
+/* IMAGINE */
+#imagini-list li img{
+    height: 34px;
+    width: 40px;
+    display: inline;
+}
+/* TITLE */
+#imagini-list li h6{
+    display: inline;
+    height: 2px !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+#imagini-list li p{
+    display: inline-block;
+    height: 10px;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#imagini-list button{
+    border-style: none !important;
+    background-color: transparent !important;
+    display: inline;
+    /* float: right; */
+    float: right;
+    margin-top: -41px;
+    font-size: 15px;
+    transition: .3s ease-in-out;
+}
+#imagini-list button:hover i{
+    background-color: rgb(0, 195, 255);
+    color: #fff;
+}
+#imagini-list button:nth-child(2):hover i{
+    background-color: rgba(255, 0, 0, 0.856) !important;
+    color: #fff !important;
+}
+#imagini-list button:first-child{
+    margin-right: 40px !important;
+}
+#imagini-list button:nth-child(2) i{
+    color: rgba(255, 0, 0, 0.856) !important;
+    font-size: 23px !important;
+}
+#imagini-list button:focus{
+    outline: none !important;
+}
+#imagini-list button i{
+    font-size: 20px;
+    color: rgba(0, 65, 179, .6);
+    padding-top: 3px;
+    border-radius: 4px;
+    height: 29px;
+    width: 30px;
+    transition: .1s ease-in-out !important;
+}
+#imagini-list a p{
+    text-decoration: underline;
+}
+/* .editable_buttons{
+    display: ;
+} */
+#imagini-list li .descLi{
+    display: inline-block;
+    height: 10px;
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+}
+/* TABLE */
+/* #employees-table{
+    width: 100% !important;
+    max-width: 100% !important;
+} */
+/* just test */
+
+/* TOOLTIP */
+.tooltip {
+    padding-top: 44px;
+    border-bottom: none !important;
+    height: 70px;
+    width: 60px;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .tooltip-inner{
+      padding-top: 0;
+      margin-bottom: 0;
+      background-color: rgb(61, 61, 61, .8);
+      color: #fff;
+      height: 20px;
+      min-width: 70px !important;
+      padding: 0 !important;
+      font-size: 15px;
+  }
+  .arrow::before{
+          border-top-color: rgb(61, 61, 61) !important;
+  }
+  
+  /* .tooltiptext1 {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+    opacity: 1;
+  } */
+  #no-gallery-one:hover{
+    background-color: rgb(228, 228, 228) !important;
+  }
+  #no-gallery-one{
+      border-radius: 4px !important;
+      transition: .2s ease-in-out !important;
+  }
+  #no-gallery-two:hover{
+    background-color: rgb(228, 228, 228) !important;
+  }
+  #no-gallery-two{
+      border-radius: 4px !important;
+      transition: .2s ease-in-out !important;
+  }
+  /* .modal-dialog{
+      width: 200px;
+  } */
+
+
+
+
+
+
+
+
+

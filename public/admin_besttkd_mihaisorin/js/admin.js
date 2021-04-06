@@ -59,7 +59,7 @@ function logout(){
 
 $(function(){
   var MessageRef = firebase.database().ref('AdminLog');
-  var threshold = 3;
+  var threshold = 30;
   MessageRef.once('value', snap => {
     scores = snap.val();
     var keys = scores ? Object.keys(scores) : [];
