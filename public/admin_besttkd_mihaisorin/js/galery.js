@@ -2,16 +2,11 @@ var storage = firebase.storage();
 var storageRef = firebase.storage().ref();
 var i = 0;
 var currentUrl = null;
-//Start code
 storageRef.child('imagini').listAll().then(function(result){
     result.items.forEach(function(imageRef){
-        // console.log('Imagine noua: '+imageRef.toString())
         displayImage(imageRef);
     });
 });
-
-//Function to convert:""
-
 function displayImage(images){
     images.getDownloadURL().then(function(url){
         console.log(url);
@@ -24,21 +19,15 @@ $(function(){
 
 function readURL(input) {
     if (input.files && input.files[0]) {
-  
       var reader = new FileReader();
-  
       reader.onload = function(e) {
         $('.image-upload-wrap').hide();
-  
         $('.file-upload-image').attr('src', e.target.result);
         $('.file-upload-content').show();
-  
         $('.image-title').html(input.files[0].name);
       };
-  
       reader.readAsDataURL(input.files[0]);
       $('#after-image-upload').removeClass('dis');
-  
     } else {
       removeUpload();
     }
@@ -50,21 +39,6 @@ function readURL(input) {
     $('.image-upload-wrap').show();
     $('#after-image-upload').addClass('dis');
   }
-
-//   $(function(){
-//     // var elementM  = document.getElementById('after-image-upload');
-//     // elementM.style.display = 'none';
-//     if(document.getElementsByClassName('file-upload-input')[0].value !== null){
-//         $('#after-image-upload').addClass('dis');
-//     } else {
-//         $('#after-image-upload').reomClass('dis');
-//     }
-//   });
-// document.getElementById('dsfsfdsdfs').addEventListener('onchange', function(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     console.log("sdads")
-// });
 
 function uploadImageFirebase(){
     if(document.getElementById('titlu').value !== "" && document.getElementById('descriere').value !== ""){
@@ -113,7 +87,6 @@ function uploadImageFirebase(){
 }
 }
 var MessageRef = firebase.database().ref('imagini');
-
 MessageRef.once('value', snap => {
     values = snap.val();
     keys = values ? Object.keys(values) : [];
@@ -155,7 +128,6 @@ MessageRef.once('value', snap => {
               cursor: null,
         },
         type: 'image',
-        //delay removal by X to allow out-animation
         removalDelay: 700,
         callbacks: {
             beforeOpen: function () {
@@ -167,9 +139,7 @@ MessageRef.once('value', snap => {
         closeOnContentClick: true,
         midClick: true
   
-    });
-
-    
+    });    
 });
 
 function delete_nodejs(id){
@@ -187,12 +157,9 @@ function edit_nodejs(editElement){
     $(".login-register-form-edit").modal();
     console.log(id_edit_main);
     MessageRef.once('value', edit => {
-        //id.img = file_image_edit
         values_edit = edit.val();
         keys_edit = values_edit ? Object.keys(values_edit) : [];
         Element232 = id_edit_main;
-        // for(var e = 0; e < keys_edit.length; e++) {
-        //     var ke = keys_edit[e];
             var img_url = values_edit[id_edit_main].url;
             var titlu_edit = values_edit[id_edit_main].titlu;
             var titlu_edit_desc = values_edit[id_edit_main].titlu;
@@ -202,7 +169,6 @@ function edit_nodejs(editElement){
             document.getElementById('titlu_edit').innerText = titlu_edit;
             document.getElementById('titlu_edit_desc').value = titlu_edit_desc;
             document.getElementById('descriere_edit_desc').value = descriere_edit_desc;
-        // }
     });
 }
 
@@ -210,8 +176,6 @@ function save_edits_nodejs_firebase(){
     if(document.getElementById('titlu_edit_desc').value !== "" && document.getElementById('descriere_edit_desc').value !== ""){
         const ref = firebase.storage().ref();
         const file = document.querySelector('#file_edit_manager').files[0];
-        // const nameFile = file.name;
-
         var tit1 = null;
         var descTd = null;
         if(file !== undefined){
@@ -225,7 +189,6 @@ function save_edits_nodejs_firebase(){
             tit1 = document.getElementById('titlu_edit_desc').value;
             descTd = document.getElementById('descriere_edit_desc').value;
             currentUrl = url;
-            // var nameFile1 = nameFile.replace(/[&\.\\#,+()$~%'":*?<>{}-]/g,'_');
         firebase.database().ref('imagini').child(Element232).set({
             url: url,
             titlu: tit1,
@@ -240,25 +203,12 @@ function save_edits_nodejs_firebase(){
         tit1 = document.getElementById('titlu_edit_desc').value;
             descTd = document.getElementById('descriere_edit_desc').value;
             console.log(currentUrl)
-            // var nameFile1 = nameFile.replace(/[&\.\\#,+()$~%'":*?<>{}-]/g,'_');\
-
-
-
-
-                //UPDATE
-                //UPDATE
-
-
-
-
-
         firebase.database().ref('imagini').child(Element232).update({
             titlu: tit1,
             descriere: descTd
         });
         setTimeout(function(){window.location  = 'galerie.html'}, 1000)
     }
-
 } else {
         if(document.getElementById('titlu_edit_desc').value === ""){
         Swal.fire({

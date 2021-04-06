@@ -180,31 +180,10 @@
                   <h4 class="card-title">Toate imaginile: </h4>
                   <a data-keyboard="true" data-toggle="modal" data-target=".login-register-form" class="dropdown-item" href="#" id="no-gallery-one"><i style="margin-right: 15px;" class="material-icons">add</i> Adauga imagine </a>
                   <br />
+                  <!-- MAIN LIST -->
                   <ul id="imagini-list">
-                    <!-- <li>
-                      <img src="https://florinrosoga.ro/wp-content/uploads/foto-featured-image-landscape-04-1024x576.jpg">
-                      <a href="#"><p>Imagine1</p></a>
-                      <div class="editable_buttons">
-                        <button class="" data-toggle="tooltip" title="Editeaza">
-                          <i class="material-icons">
-                            border_color
-                          </i>
-                        </button>
-
-                        <button  data-toggle="tooltip" title="Sterge">
-                          <i class="material-icons">
-                            cancel
-                          </i>
-                        </button>
-                      </div>
-                    </li> -->
-
-
-
-                    
                   </ul>
-                  <!-- <p class="card-category">
-                    Numar clicuri din ultimele 24 de ore</p> -->
+
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -295,66 +274,16 @@
 
 
 
-  <!-- <a class="btn btn-primary" href="#" data-toggle="modal" data-target=".login-register-form">
-    Login - Registration Modal
- </a> -->
-
-
-
-
-
-
+<!-- MODALS -->
   <div class="modal fade login-register-form" role="dialog" tabindex='-1'>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
               <h3>Aduaga imagine</h3>
-                <!-- <button type="button" class="close" data-dismiss="modal">
-                    <span class="glyphicon glyphicon-remove"></span>
-                </button>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                    <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
-                </ul> -->
+
             </div>
             <div class="modal-body">
-                <!-- <div class="tab-content">
-                    <div id="login-form" class="tab-pane fade in active">
-                        <form action="/">
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" name="remember"> Remember me</label>
-                            </div>
-                            <button type="submit" class="btn btn-default">Login</button>
-                        </form>
-                    </div>
-                    <div id="registration-form" class="tab-pane fade">
-                        <form action="/">
-                            <div class="form-group">
-                                <label for="name">Your Name:</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="newemail">Email:</label>
-                                <input type="email" class="form-control" id="newemail" placeholder="Enter new email" name="newemail">
-                            </div>
-                            <div class="form-group">
-                                <label for="newpwd">Password:</label>
-                                <input type="password" class="form-control" id="newpwd" placeholder="New password" name="newpwd">
-                            </div>
-                            <button type="submit" class="btn btn-default">Register</button>
-                        </form>
-                    </div>
-
-                </div> -->
-                <!-- <img src="https://florinrosoga.ro/wp-content/uploads/foto-featured-image-landscape-04-1024x576.jpg"> -->
+               
                 <div class="file-upload">
                   
                 
@@ -389,10 +318,7 @@
                 </div>
                 
             </div>
-<!--                                    <div class="modal-footer">-->
-  <!-- $('.file-upload-input').trigger( 'click' ) -->
-<!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--                                    </div>-->
+
         </div>
     </div>
 </div>
@@ -405,66 +331,15 @@
       <div class="modal-content">
           <div class="modal-header">
             <h3 id="titlu_edit"></h3>
-              <!-- <button type="button" class="close" data-dismiss="modal">
-                  <span class="glyphicon glyphicon-remove"></span>
-              </button>
-              <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                  <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
-              </ul> -->
+
           </div>
           <div class="modal-body">
-              <!-- <div class="tab-content">
-                  <div id="login-form" class="tab-pane fade in active">
-                      <form action="/">
-                          <div class="form-group">
-                              <label for="email">Email:</label>
-                              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                          </div>
-                          <div class="form-group">
-                              <label for="pwd">Password:</label>
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                          </div>
-                          <div class="checkbox">
-                              <label><input type="checkbox" name="remember"> Remember me</label>
-                          </div>
-                          <button type="submit" class="btn btn-default">Login</button>
-                      </form>
-                  </div>
-                  <div id="registration-form" class="tab-pane fade">
-                      <form action="/">
-                          <div class="form-group">
-                              <label for="name">Your Name:</label>
-                              <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
-                          </div>
-                          <div class="form-group">
-                              <label for="newemail">Email:</label>
-                              <input type="email" class="form-control" id="newemail" placeholder="Enter new email" name="newemail">
-                          </div>
-                          <div class="form-group">
-                              <label for="newpwd">Password:</label>
-                              <input type="password" class="form-control" id="newpwd" placeholder="New password" name="newpwd">
-                          </div>
-                          <button type="submit" class="btn btn-default">Register</button>
-                      </form>
-                  </div>
-
-              </div> -->
-              <!-- <img src="https://florinrosoga.ro/wp-content/uploads/foto-featured-image-landscape-04-1024x576.jpg"> -->
-              <div class="file-upload">
-                
               
-                <!-- <div class="image-upload-wrap">
-                  <input id="dsfsfdsdfs" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                  <div class="drag-text">
-                    <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
-                  </div>
-                </div> -->
+              <div class="file-upload">
+            
                 <div id="f-after" class="file-upload-content1" align = 'center'>
                   <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
-                  <!-- <div class="image-title-wrap">
-                    <button id="remove" type="button" onclick="removeUpload()" class="remove-image">Sterge <span class="image-title">Uploaded Image</span></button>
-                  </div> -->
+                 
                 </div>
               </div>
 
@@ -493,10 +368,7 @@
               </div>
               
           </div>
-<!--                                    <div class="modal-footer">-->
-<!-- $('.file-upload-input').trigger( 'click' ) -->
-<!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--                                    </div>-->
+
       </div>
   </div>
 </div>
