@@ -190,35 +190,32 @@
 
 
   /* FILE */
-  body {
-    font-family: sans-serif;
-    background-color: #eeeeee;
-  }
   
   .file-upload {
     background-color: #ffffff;
-    width: 600px;
+    width: 100% !important;
     margin: 0 auto;
     padding: 20px;
   }
   
   .file-upload-btn {
-    width: 100%;
+    width: 160px;
     margin: 0;
     color: #fff;
-    background: #1FB264;
+    background: #008bfd;
     border: none;
     padding: 10px;
     border-radius: 4px;
-    border-bottom: 4px solid #15824B;
+    border-bottom: 4px solid #002c8b;
     transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
+    font-size: 14px !important;
     font-weight: 700;
   }
   
   .file-upload-btn:hover {
-    background: #1AA059;
+    background: #5bb5ff;
     color: #ffffff;
     transition: all .2s ease;
     cursor: pointer;
@@ -235,6 +232,7 @@
   }
   
   .file-upload-input {
+    transition: .2s ease-in-out !important;
     position: absolute;
     margin: 0;
     padding: 0;
@@ -246,17 +244,28 @@
   }
   
   .image-upload-wrap {
+    transition: .2s ease-in-out !important;
     margin-top: 20px;
-    border: 4px dashed #1FB264;
+    border: 4px dashed #0088e2;
     position: relative;
   }
   
   .image-dropping,
   .image-upload-wrap:hover {
-    background-color: #1FB264;
+    background-color: #0088e2;
     border: 4px dashed #ffffff;
   }
-  
+
+  .image-dropping,
+  .image-upload-wrap:hover h4{
+    color:#ffffff;
+  }
+
+  .image-dropping,
+  .image-upload-wrap:active h4{
+    color:#ffffff;
+  }
+
   .image-title-wrap {
     padding: 0 15px 15px 15px;
     color: #222;
@@ -266,14 +275,15 @@
     text-align: center;
   }
   
-  .drag-text h3 {
+  .drag-text h4 {
     font-weight: 100;
     text-transform: uppercase;
-    color: #15824B;
+    color: #000000;
     padding: 60px 0;
   }
   
   .file-upload-image {
+    transition: .2s ease-in-out !important;
     max-height: 200px;
     max-width: 200px;
     margin: auto;
@@ -293,6 +303,7 @@
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 14px;
   }
   
   .remove-image:hover {
@@ -305,6 +316,9 @@
   .remove-image:active {
     border: 0;
     transition: all .2s ease;
+  }
+  .dis{
+      display: none;
   }
 
 

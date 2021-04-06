@@ -36,6 +36,7 @@ function readURL(input) {
       };
   
       reader.readAsDataURL(input.files[0]);
+      $('#after-image-upload').removeClass('dis');
   
     } else {
       removeUpload();
@@ -46,11 +47,20 @@ function readURL(input) {
     $('.file-upload-input').replaceWith($('.file-upload-input').clone());
     $('.file-upload-content').hide();
     $('.image-upload-wrap').show();
+    $('#after-image-upload').addClass('dis');
   }
-  $('.image-upload-wrap').bind('dragover', function () {
-          $('.image-upload-wrap').addClass('image-dropping');
-      });
-      $('.image-upload-wrap').bind('dragleave', function () {
-          $('.image-upload-wrap').removeClass('image-dropping');
-  });
-  
+
+//   $(function(){
+//     // var elementM  = document.getElementById('after-image-upload');
+//     // elementM.style.display = 'none';
+//     if(document.getElementsByClassName('file-upload-input')[0].value !== null){
+//         $('#after-image-upload').addClass('dis');
+//     } else {
+//         $('#after-image-upload').reomClass('dis');
+//     }
+//   });
+// document.getElementById('dsfsfdsdfs').addEventListener('onchange', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("sdads")
+// });

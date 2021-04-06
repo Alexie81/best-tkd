@@ -370,23 +370,41 @@
                 </div> -->
                 <!-- <img src="https://florinrosoga.ro/wp-content/uploads/foto-featured-image-landscape-04-1024x576.jpg"> -->
                 <div class="file-upload">
-                  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                  
                 
                   <div class="image-upload-wrap">
-                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                    <input id="dsfsfdsdfs" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                     <div class="drag-text">
-                      <h3>Drag and drop a file or select add Image</h3>
+                      <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
                     </div>
                   </div>
-                  <div class="file-upload-content">
-                    <img class="file-upload-image" src="#" alt="your image" />
+                  <div id="f-after" class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="404: Nu a fost gasita imaginea !!!" />
                     <div class="image-title-wrap">
-                      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                      <button id="remove" type="button" onclick="removeUpload()" class="remove-image">Sterge <span class="image-title">Uploaded Image</span></button>
                     </div>
                   </div>
                 </div>
+
+                <div id="after-image-upload" class="dis">
+                  <label class="control-label col-sm-2" for="titlu" style="font-weight: bold;color: black;">Titlu: </label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="titlu" placeholder="Descriere titlu">
+                    </div>
+                    <br />
+                    <label class="control-label col-sm-2" for="descriere" style="font-weight: bold;color: black;">Descriere: </label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="descriere" placeholder="Descriere imagine">
+                    </div>
+                    <br />
+                    <div class="col-sm-12" align="center">
+                <button class="file-upload-btn" type="button">salveaza imaginea</button>
+              </div>
+                </div>
+                
             </div>
 <!--                                    <div class="modal-footer">-->
+  <!-- $('.file-upload-input').trigger( 'click' ) -->
 <!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
 <!--                                    </div>-->
         </div>
