@@ -80,17 +80,18 @@ function uploadImageFirebase(){
     console.log(st1)
     const task = storageRef.child("images/"+nameFile).put(file, metadata);
     task
-    .then(snapshot => {
-        snapshot.ref.getDownloadURL();
+    .then(snapshot =>snapshot.ref.getDownloadURL())
+    .then(url => {
         tit1 = document.getElementById('titlu').value;
         descTd = document.getElementById('descriere').value;
-    })
-    .then(url => {
-    firebase.database().ref('imagini').child(nameFile).set({
+        var nameFile1 = nameFile.replace(/[&\.\\#,+()$~%'":*?<>{}-]/g,'_');
+    firebase.database().ref('imagini').child(nameFile1).set({
         url: url,
         titlu: tit1,
-        desc: descTd
+        descriere: descTd
     });
+    window.location = 'galerie.html'
+    console.log(url)
     });
 } else {
     if(document.getElementById('titlu').value === ""){
@@ -110,3 +111,79 @@ function uploadImageFirebase(){
     }
 }
 }
+var MessageRef = firebase.database().ref('imagini');
+
+MessageRef.once('value', snap => {
+    values = snap.val();
+    keys = values ? Object.keys(values) : [];
+
+    for(var i = 0; i < keys.length; i++) {
+        var k = keys[i];
+        var url = values[k].url;
+        var titlu = values[k].titlu;
+        var descriere = values[k].descriere;
+        var nameKey = keys[i];
+
+        var optionHtmlInnerAll = `<li>
+        <img src="${url}">
+        <a href="${url}" ><p>${titlu}</p></a>
+        <div class="editable_buttons">
+          <button data-toggle="tooltip" title="Editeaza" id="${nameKey}" onclick="edit_nodejs(this)">
+            <i class="material-icons">
+              border_color
+            </i>
+          </button>
+
+          <button data-toggle="tooltip" title="Sterge" id="sterge_${nameKey}" onclick="delete_nodejs(this)">
+            <i class="material-icons">
+              cancel
+            </i>
+          </button>
+
+          <p class="descriereFirebase" style="display:none">${descriere}</p>
+        </div>
+      </li>`;
+
+        $('#imagini-list').append(optionHtmlInnerAll);
+    }
+});
+
+function delete_nodejs(id){
+    var id_main = id.id.replace('sterge_', '');
+    console.log(id_main);
+    if (window.confirm('Sunteti sigur ca vreti sa stergeti aceasta imagine ?')){
+            firebase.database().ref('imagini/'+id_main).remove();
+            console.log('success');
+            setTimeout(function(){window.location  = 'galerie.html'}, 1000)
+        } else {return false;}
+}
+
+function edit_nodejs(editElement){
+    var id_edit_main = editElement.id;
+    $(".login-register-form-edit").modal();
+    console.log(id_edit_main);
+    MessageRef.once('value', edit => {
+        //id.img = file_image_edit
+        values_edit = edit.val();
+        keys_edit = values_edit ? Object.keys(values_edit) : [];
+
+        // for(var e = 0; e < keys_edit.length; e++) {
+        //     var ke = keys_edit[e];
+            var img_url = values_edit[id_edit_main].url;
+            var titlu_edit = values_edit[id_edit_main].titlu;
+            var titlu_edit_desc = values_edit[id_edit_main].titlu;
+            var descriere_edit_desc = values_edit[id_edit_main].descriere;
+
+            document.getElementById('file_image_edit').src = img_url;
+            document.getElementById('titlu_edit').innerText = titlu_edit;
+            document.getElementById('titlu_edit_desc').value = titlu_edit_desc;
+            document.getElementById('descriere_edit_desc').value = descriere_edit_desc;
+        // }
+    });
+}
+
+
+
+
+
+
