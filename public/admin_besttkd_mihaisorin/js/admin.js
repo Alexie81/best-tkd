@@ -113,4 +113,7 @@ $(function(){
       document.getElementById('admin_log_all_info_main_panel_admin').innerText = nrX;
     });
   // }  END
+
+
+
 });

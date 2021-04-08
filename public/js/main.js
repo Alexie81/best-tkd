@@ -590,19 +590,13 @@ window.onload = function() {
 // CLICURI
 var clicks = null;
 $('body').on('click', function(){
-    clicks += 1;
-    var date = new Date();
-    var currentHour = date.getHours();
-    var delimiter = `0`;
-    var delimiterDouble = `00`;
-    var delimiterImpButDo = `24`;
     firebase.database().ref('clicuri').once('value', click => {
-        if(currentHour === delimiter || currentHour == delimiterDouble || currentHour === delimiterImpButDo){
-            console.log('DA')
-        } else {
-            console.log('NU')
-        }
-        console.log(click.val().h24);
+            clicks = click.val().nrTotal + 1;
+            firebase.database().ref('clicuri').update({
+                nrTotal: clicks
+            });
     });
-    console.log(currentHour);
 });
+// inregistrare minut
+// trash word
+// actualizare thread
