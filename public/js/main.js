@@ -9,6 +9,25 @@
 // }, 4000);
 // }
 // });
+var vizitatori = null;
+
+// FIREBASE
+
+var firebaseConfig = {
+    apiKey: "AIzaSyAibhDPLow9k_2r1t-mWXhqOAbhOf8Wj2E",
+    authDomain: "best-tkd.firebaseapp.com",
+    databaseURL: "https://best-tkd-default-rtdb.firebaseio.com",
+    projectId: "best-tkd",
+    storageBucket: "best-tkd.appspot.com",
+    messagingSenderId: "628384403687",
+    appId: "1:628384403687:web:b5a8575851c9abbe2ad242",
+    measurementId: "G-RV2YCV0YTZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
 /* ==========================================
             SMOOTH SCROLLING
 =============================================*/
@@ -555,3 +574,35 @@ setTimeout(function(){document.getElementById(elementId).innerHTML = final_gener
 //END GENERIC_TITLES FUNCTION
 
 
+
+
+
+window.onload = function() {
+    firebase.database().ref('vizitatori').once('value', snap =>  {
+        var vizFirebaseD = snap.val().nrTotal;
+        vizitatori = vizFirebaseD + 1;
+        firebase.database().ref('vizitatori').update({
+            nrTotal: vizitatori
+        });
+    });
+};
+
+// CLICURI
+var clicks = null;
+$('body').on('click', function(){
+    clicks += 1;
+    var date = new Date();
+    var currentHour = date.getHours();
+    var delimiter = `0`;
+    var delimiterDouble = `00`;
+    var delimiterImpButDo = `24`;
+    firebase.database().ref('clicuri').once('value', click => {
+        if(currentHour === delimiter || currentHour == delimiterDouble || currentHour === delimiterImpButDo){
+            console.log('DA')
+        } else {
+            console.log('NU')
+        }
+        console.log(click.val().h24);
+    });
+    console.log(currentHour);
+});

@@ -20,6 +20,7 @@
 
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   <link href="../css/galery.css " rel="stylesheet" />
+  <link href="../css/animate/animate.css " rel="stylesheet" />
 </head>
 
 <body class="">
@@ -168,7 +169,14 @@
       </nav>
       <!-- End Navbar -->
       <div class="content">
+        <center>
+          <div id="loader-main-div">
+        <div class="wow animated fadeIn" id="loader"></div>
+        <h3 class="wow animated fadeIn" align="center" style="font-weight:500;">In curs de procesare...</h3>
+      </div>
+        </center>
         <div class="container-fluid">
+          
           <div class="row">
             <div class="col-md-6">
               <div class="card card-chart">
@@ -198,19 +206,21 @@
             <div class="col-md-6">
               <div class="card card-chart">
                 <div class="card-header card-header-warning">
-                  <h3 align="center"><i class="material-icons" style="font-size: 30px; margin-bottom: -20px !important; height: 55px; vertical-align: middle;">play_circle_outline</i> <b>Videouri</b></h3>
+                  <h3 align="center"><i class="material-icons" style="font-size: 30px; margin-bottom: -20px !important; height: 55px; vertical-align: middle;">play_circle_outline</i> <b>Videoclipuri</b></h3>
                 </div>
                 
                 <div class="card-body">
-                  <h4 class="card-title"> Toate videourile: </h4>
-                  <a class="dropdown-item" href="#" id="no-gallery-two"><i style="margin-right: 15px;" class="material-icons">add</i> Adauga video </a>
+                  <h4 class="card-title"> Toate videoclipurile: </h4>
+                  <a data-keyboard="true" data-toggle="modal" data-target=".login-register-form_link" class="dropdown-item" href="#" id="no-gallery-two"><i style="margin-right: 15px;" class="material-icons">add</i> Adauga video </a>
                   <br />
+                  <ul id="videos-list">
+                  </ul>
                   <!-- <p class="card-category">
                     Numar clicuri din ultimele 24 de ore</p> -->
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">play_circle_outline</i> Videouri
+                    <i class="material-icons">play_circle_outline</i> Videoclipuri
                   </div>
                 </div>
               </div>
@@ -280,7 +290,7 @@
         <div class="modal-content">
             <div class="modal-header">
               <h3>Aduaga imagine</h3>
-
+              <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                
@@ -331,7 +341,7 @@
       <div class="modal-content">
           <div class="modal-header">
             <h3 id="titlu_edit"></h3>
-
+            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
               
@@ -373,6 +383,123 @@
   </div>
 </div>
 
+
+<!-- Youtube Link -->
+<div class="modal fade login-register-form_link" role="dialog" tabindex='-1'>
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="titlu_edit">Link Youtube</h3>
+            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+              
+            <div class="file-upload">
+          
+              <!-- <div id="f-after" class="file-upload-content1" align = 'center'>
+                <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
+               
+              </div> -->
+            </div>
+
+            <div id="after-image-upload">
+              <label class="control-label col-sm-2" for="link_edit_desc" style="font-weight: bold;color: black;">Link: </label>
+              <div class="col-sm-12" align="center">
+                
+                <input type="text" class="form-control" id="link_edit_desc" placeholder="Scrieti aici linkul...">
+                <br >
+              </div>
+              <label class="control-label col-sm-2" for="titlu_edit_desc_link" style="font-weight: bold;color: black;">Titlu: </label>
+              
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="titlu_edit_desc_link" placeholder="Descriere titlu">
+                </div>
+                <br />
+                <label class="control-label col-sm-2" for="descriere_edit_desc_link" style="font-weight: bold;color: black;">Descriere: </label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="descriere_edit_desc_link" placeholder="Descriere imagine">
+                </div>
+                <br />
+                <div class="col-sm-12" align="center">
+            <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase_link()">salveaza</button>
+          </div>
+            </div>
+            
+        </div>
+              </div>
+              
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Youtube Link EDIT -->
+<div class="modal fade login-register-form_link_edit" role="dialog" tabindex='-1'>
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="titlu_edit_link"></h3>
+            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+          </div>
+          <div class="modal-body">
+              
+            <div class="file-upload">
+          
+              <!-- <div id="f-after" class="file-upload-content1" align = 'center'>
+                <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
+               
+              </div> -->
+            </div>
+
+            <div id="after-image-upload">
+              <label class="control-label col-sm-2" for="link_edit_desc_e" style="font-weight: bold;color: black;">Link: </label>
+              <div class="col-sm-12" align="center">
+                
+                <input disabled type="text" class="form-control" id="link_edit_desc_e" placeholder="Scrieti aici linkul...">
+                <br >
+              </div>
+              <label class="control-label col-sm-2" for="titlu_edit_desc_link_e" style="font-weight: bold;color: black;">Titlu: </label>
+              
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="titlu_edit_desc_link_e" placeholder="Descriere titlu">
+                </div>
+                <br />
+                <label class="control-label col-sm-2" for="descriere_edit_desc_link_e" style="font-weight: bold;color: black;">Descriere: </label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="descriere_edit_desc_link_e" placeholder="Descriere imagine">
+                    <p id="keyName_link" class="dis"></p>
+                </div>
+                <br />
+                <div class="col-sm-12" align="center">
+            <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase_link_e()">salveaza</button>
+          </div>
+            </div>
+            
+        </div>
+              </div>
+              
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
   
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -409,6 +536,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
  
   <script src="../assets/js/plugins/arrive.min.js"></script>
+  <script src="../js/wow/wow.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
       <!-- Sweet Alert -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

@@ -271,11 +271,11 @@ demo = {
   // 
 
 
-function check_coll() {
+  $('.navbar-toggler').on('click', function(){
   setTimeout(function(){
-  var h = document.body.clientHeight * 2;
-  var conct = String(h+'px')
+  var h = 0;
+  var conct = 0
   document.getElementsByClassName('close-layer')[0].style.height = conct;
-  console.log(conct)
+  // console.log(conct)
 });
-}
+});

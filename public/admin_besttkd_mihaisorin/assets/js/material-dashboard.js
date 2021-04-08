@@ -115,7 +115,7 @@ $(document).on('click', '.navbar-toggler', function() {
       $layer.addClass('visible');
     }, 100);
 
-    $layer.click(function() {
+    $('.main-panel').click(function() {
       $('html').removeClass('nav-open');
       mobile_menu_visible = 0;
 

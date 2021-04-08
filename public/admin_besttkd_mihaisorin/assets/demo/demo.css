@@ -59,3 +59,34 @@
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
+.close-layer{
+  background-color: transparent;
+}
+
+footer {
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  width: 100%;
+  height: 40px !important;
+  background-color: rgb(182, 182, 182);
+  /* color: rgb(0, 0, 0);
+  text-align: center;
+  height: 50px; */
+}
+/* footer p{
+  margin-top: 10px !important;
+} */
+@media  (max-width: 992px){
+  footer {
+    left: 0;
+    font-size: 10px;
+  }
+}
+.main-panel{
+  z-index: 1;
+}
+.card{
+  z-index: 1;
+}

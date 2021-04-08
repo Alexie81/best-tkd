@@ -11,18 +11,15 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
-  var uid = null;
 
-  auth.onAuthStateChanged(firebaseUser => {
-    uid = firebaseUser.uid;
-    console.log(uid)
-    //console.log("inside!")
-    if (firebaseUser) {
-        $('body').css('display', 'block');
-    }else{
-        $('body').css('display', 'none');
-        window.location = "index.html";
-    }
+auth.onAuthStateChanged(firebaseUser => {
+  //console.log("inside!")
+  if (firebaseUser) {
+      $('body').css('display', 'block');
+  }else{
+      $('body').css('display', 'none');
+      window.location = "index.html";
+  }
 });
 
 // auth.revokeRefreshTokens(uid)
@@ -90,3 +87,30 @@ $(function(){
   });
 });
 
+
+
+$(function(){
+  // VIZITATORI: {
+  firebase.database().ref('vizitatori').on('value', viz => {
+    console.log(viz.val().nrTotal)
+    document.getElementById('vzitatori_totali_main_panel_admin').innerText = viz.val().nrTotal;
+  });
+  // }  END
+
+  // ADMIN - LOGIN: {
+    firebase.database().ref('AdminLog').on('value', adm => {
+      var nrX = null;
+      var keys = adm.val() ? Object.keys(adm.val()) : [];
+      for(var i=0; i != keys.length; i++){
+        firebase.database().ref('AdminLog').child(keys[i]).on('value', snapA => {
+          var keys1 = snapA.val() ? Object.keys(snapA.val()) : [];
+          for(var k=0; k != keys1.length - 1; k++){
+            nrX += 1;
+          }
+        });
+      }
+      // console.log("AdminLog -> " + nrX);
+      document.getElementById('admin_log_all_info_main_panel_admin').innerText = nrX;
+    });
+  // }  END
+});
