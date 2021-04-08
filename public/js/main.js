@@ -597,6 +597,23 @@ $('body').on('click', function(){
             });
     });
 });
+
+//JSON AJAX HTTP REQUEST
+
+// var ajax = new XMLHttpRequest();
+// ajax.open('GET', 'clicks_main.json', true);
+// ajax.send();
+// ajax.onreadystatechange = function() {
+//   if(this.readyState == 4 && this.status == 200){
+//     console.log(this.responseText);
+//     var json = JSON.parse(this.responseText);
+//     // var videos = json.items;
+//     console.log(json)
+//   }
+// }
+
+//
+
 // inregistrare minut
 // trash word
 // actualizare thread
