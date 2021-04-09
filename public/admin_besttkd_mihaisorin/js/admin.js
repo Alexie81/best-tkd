@@ -115,5 +115,8 @@ $(function(){
   // }  END
 
 
-
+  firebase.database().ref('clicuri').on('value', click => {
+ var clicksA = click.val().nrTotal;
+    document.getElementById('clicks_all_main_panel_firebase_database').innerText = clicksA;
+  });
 });

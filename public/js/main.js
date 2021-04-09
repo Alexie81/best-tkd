@@ -600,17 +600,34 @@ $('body').on('click', function(){
 
 //JSON AJAX HTTP REQUEST
 
+// $('body').on('click', function(){
 // var ajax = new XMLHttpRequest();
-// ajax.open('GET', 'clicks_main.json', true);
-// ajax.send();
+// ajax.open('GET', 'clicks.json', true);
+// ajax.setRequestHeader("Content-Type", "application/json");
 // ajax.onreadystatechange = function() {
 //   if(this.readyState == 4 && this.status == 200){
 //     console.log(this.responseText);
 //     var json = JSON.parse(this.responseText);
-//     // var videos = json.items;
-//     console.log(json)
+//     // console.log(json.clicks)
 //   }
 // }
+// clicks = JSON.stringify({"clicks" : 3});
+// ajax.send(clicks);
+
+
+
+// var sendA = new XMLHttpRequest();
+// sendA.open('POST', 'clicks.json', true);
+// sendA.onreadystatechange = function() {
+//   if(this.readyState == 4 && this.status == 200){
+//     // console.log(this.responseText);
+//     var json = JSON.parse(this.responseText);
+//     clicks = parseInt(json.clicks) + 1;
+//   }
+// }
+// console.log(clicks)
+// sendA.send(clicks);
+// })
 
 //
 

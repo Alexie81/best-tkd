@@ -93,6 +93,8 @@ var firebaseConfig = {
 
         //console.log("agaaaaain");
         const promise = firebase.auth().signInWithEmailAndPassword(email.value, password.value);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+        .then(() => {
         promise 
         .then(user => {
                 console.log(user.uid)
@@ -172,6 +174,7 @@ var firebaseConfig = {
                 timer: 1500
             })
         );
+    })
      } else {
         // swal({
         //     title: 'Eroare !',
@@ -180,8 +183,9 @@ var firebaseConfig = {
         //     timer: 1500
         // })
      }
-}
+    }
 
+    
 function vrify(){
     
 }

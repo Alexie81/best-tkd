@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
 
   <link href="../assets/demo/demo.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
                 <p>Galerie</p>
               </a>
             </li>
-            <li class="nav-item ">
+            <!-- <li class="nav-item ">
               <a class="nav-link" href="vizitatori.html">
                 <i class="material-icons">analytics</i>
                 <p>Vizitatori</p>
@@ -64,7 +64,7 @@
                 <i class="material-icons">touch_app</i>
                 <p>Clicuri</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item ">
               <a class="nav-link" href="map.html">
                 <i class="material-icons">location_ons</i>
@@ -284,154 +284,114 @@
 
 
 
-<!-- MODALS -->
-  <div class="modal fade login-register-form" role="dialog" tabindex='-1'>
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-              <h3>Aduaga imagine</h3>
-              <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-               
-                <div class="file-upload">
-                  
-                
-                  <div class="image-upload-wrap">
-                    <input id="dsfsfdsdfs" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                    <div class="drag-text">
-                      <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
-                    </div>
-                  </div>
-                  <div id="f-after" class="file-upload-content">
-                    <img class="file-upload-image" src="#" alt="404: Nu a fost gasita imaginea !!!" />
-                    <div class="image-title-wrap">
-                      <button id="remove" type="button" onclick="removeUpload()" class="remove-image">Sterge <span class="image-title">Uploaded Image</span></button>
-                    </div>
-                  </div>
-                </div>
 
-                <div id="after-image-upload" class="dis">
-                  <label class="control-label col-sm-2" for="titlu" style="font-weight: bold;color: black;">Titlu: </label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="titlu" placeholder="Descriere titlu">
-                    </div>
-                    <br />
-                    <label class="control-label col-sm-2" for="descriere" style="font-weight: bold;color: black;">Descriere: </label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="descriere" placeholder="Descriere imagine">
-                    </div>
-                    <br />
-                    <div class="col-sm-12" align="center">
-                <button class="file-upload-btn" type="button" onclick="uploadImageFirebase()">salveaza imaginea</button>
-              </div>
-                </div>
-                
-            </div>
 
-        </div>
-    </div>
 </div>
+
+
+<!-- MODALS -->
+
+
+
+
+<div class="modal fade login-register-form" role="dialog" tabindex='-1' aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h3>Aduaga imagine</h3>
+            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+             
+              <div class="file-upload">
+                
+              
+                <div class="image-upload-wrap">
+                  <input id="dsfsfdsdfs" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                  <div class="drag-text">
+                    <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
+                  </div>
+                </div>
+                <div id="f-after" class="file-upload-content">
+                  <img class="file-upload-image" src="#" alt="404: Nu a fost gasita imaginea !!!" />
+                  <div class="image-title-wrap">
+                    <button id="remove" type="button" onclick="removeUpload()" class="remove-image">Sterge <span class="image-title">Uploaded Image</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="after-image-upload" class="dis">
+                <label class="control-label col-sm-2" for="titlu" style="font-weight: bold;color: black;">Titlu: </label>
+                  <div class="col-sm-12">
+                      <input type="text" class="form-control" id="titlu" placeholder="Descriere titlu">
+                  </div>
+                  <br />
+                  <label class="control-label col-sm-2" for="descriere" style="font-weight: bold;color: black;">Descriere: </label>
+                  <div class="col-sm-12">
+                      <input type="text" class="form-control" id="descriere" placeholder="Descriere imagine">
+                  </div>
+                  <br />
+                  <div class="col-sm-12" align="center">
+              <button class="file-upload-btn" type="button" onclick="uploadImageFirebase()">salveaza imaginea</button>
+            </div>
+              </div>
+              
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
 
 
 
 <!-- POPUP EDIT INFORMATIONS -->
 <div class="modal fade login-register-form-edit" role="dialog" tabindex='-1'>
-  <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-          <div class="modal-header">
-            <h3 id="titlu_edit"></h3>
-            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
-          </div>
-          <div class="modal-body">
-              
-              <div class="file-upload">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="titlu_edit"></h3>
+          <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
             
-                <div id="f-after" class="file-upload-content1" align = 'center'>
-                  <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
-                 
-                </div>
-              </div>
-
-              <div id="after-image-upload">
-                <div class="col-sm-12" align="center">
-                  <input id="file_edit_manager" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Schimba imaginea</button>
-                  <div class="drag-text" style="display: none;">
-                    <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
-                  </div>
-                </div>
-                <label class="control-label col-sm-2" for="titlu_edit_desc" style="font-weight: bold;color: black;">Titlu: </label>
-                
-                  <div class="col-sm-12">
-                      <input type="text" class="form-control" id="titlu_edit_desc" placeholder="Descriere titlu">
-                  </div>
-                  <br />
-                  <label class="control-label col-sm-2" for="descriere_edit_desc" style="font-weight: bold;color: black;">Descriere: </label>
-                  <div class="col-sm-12">
-                      <input type="text" class="form-control" id="descriere_edit_desc" placeholder="Descriere imagine">
-                  </div>
-                  <br />
-                  <div class="col-sm-12" align="center">
-              <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase()">salveaza</button>
-            </div>
-              </div>
-              
-          </div>
-
-      </div>
-  </div>
-</div>
-
-
-<!-- Youtube Link -->
-<div class="modal fade login-register-form_link" role="dialog" tabindex='-1'>
-  <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-          <div class="modal-header">
-            <h3 id="titlu_edit">Link Youtube</h3>
-            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
-          </div>
-          <div class="modal-body">
-              
             <div class="file-upload">
           
-              <!-- <div id="f-after" class="file-upload-content1" align = 'center'>
+              <div id="f-after" class="file-upload-content1" align = 'center'>
                 <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
                
-              </div> -->
+              </div>
             </div>
 
             <div id="after-image-upload">
-              <label class="control-label col-sm-2" for="link_edit_desc" style="font-weight: bold;color: black;">Link: </label>
               <div class="col-sm-12" align="center">
-                
-                <input type="text" class="form-control" id="link_edit_desc" placeholder="Scrieti aici linkul...">
-                <br >
+                <input id="file_edit_manager" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Schimba imaginea</button>
+                <div class="drag-text" style="display: none;">
+                  <h4><p style="font-size: 20px;height: 10px; font-weight: bold;">click aici pentru a</p><br />Trage imaginea aici sau selecteaza o imagine din computer</h4>
+                </div>
               </div>
-              <label class="control-label col-sm-2" for="titlu_edit_desc_link" style="font-weight: bold;color: black;">Titlu: </label>
+              <label class="control-label col-sm-2" for="titlu_edit_desc" style="font-weight: bold;color: black;">Titlu: </label>
               
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="titlu_edit_desc_link" placeholder="Descriere titlu">
+                    <input type="text" class="form-control" id="titlu_edit_desc" placeholder="Descriere titlu">
                 </div>
                 <br />
-                <label class="control-label col-sm-2" for="descriere_edit_desc_link" style="font-weight: bold;color: black;">Descriere: </label>
+                <label class="control-label col-sm-2" for="descriere_edit_desc" style="font-weight: bold;color: black;">Descriere: </label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="descriere_edit_desc_link" placeholder="Descriere imagine">
+                    <input type="text" class="form-control" id="descriere_edit_desc" placeholder="Descriere imagine">
                 </div>
                 <br />
                 <div class="col-sm-12" align="center">
-            <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase_link()">salveaza</button>
+            <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase()">salveaza</button>
           </div>
             </div>
             
         </div>
-              </div>
-              
-          </div>
 
-      </div>
-  </div>
+    </div>
+</div>
 </div>
 
 
@@ -498,6 +458,56 @@
       </div>
   </div>
 </div>
+
+<!-- Youtube Link -->
+<div class="modal fade login-register-form_link" role="dialog" tabindex='-1' >
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="titlu_edit_link">Link Youtube</h3>
+            <button  type="button" class="close cl-no-focus" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+              
+            <div class="file-upload">
+          
+              <!-- <div id="f-after" class="file-upload-content1" align = 'center'>
+                <img class="file-upload-image" id="file_image_edit" src="#" alt="404: Nu a fost gasita imaginea !!!" />
+               
+              </div> -->
+            </div>
+
+            <div id="after-image-upload">
+              <label class="control-label col-sm-2" for="link_edit_desc" style="font-weight: bold;color: black;">Link: </label>
+              <div class="col-sm-12" align="center">
+                
+                <input type="text" class="form-control" id="link_edit_desc" placeholder="Scrieti aici linkul...">
+                <br >
+              </div>
+              <label class="control-label col-sm-2" for="titlu_edit_desc_link" style="font-weight: bold;color: black;">Titlu: </label>
+              
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="titlu_edit_desc_link" placeholder="Descriere titlu">
+                </div>
+                <br />
+                <label class="control-label col-sm-2" for="descriere_edit_desc_link" style="font-weight: bold;color: black;">Descriere: </label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="descriere_edit_desc_link" placeholder="Descriere imagine">
+                </div>
+                <br />
+                <div class="col-sm-12" align="center">
+            <button class="file-upload-btn" type="button" onclick="save_edits_nodejs_firebase_link()">salveaza</button>
+          </div>
+            </div>
+            
+        </div>
+              </div>
+              
+          </div>
+
+      </div>
+  </div>
+
 
 
   

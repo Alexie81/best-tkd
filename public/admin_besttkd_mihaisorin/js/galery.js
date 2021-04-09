@@ -1,14 +1,11 @@
-auth.onAuthStateChanged(firebaseUser => {
-  uid = firebaseUser.uid;
-  console.log(uid)
-  //console.log("inside!")
-  if (firebaseUser) {
-      $('body').css('display', 'block');
-  }else{
-      $('body').css('display', 'none');
-      window.location = "../index.html";
-  }
-});
+// auth.onAuthStateChanged(firebaseUser => {
+//   if (firebaseUser) {
+//       $('body').css('display', 'block');
+//    } else {
+//       $('body').css('display', 'none');
+//       window.location = "../index.html";
+//   }
+// });
 
 var storage = firebase.storage();
 var storageRef = firebase.storage().ref();
@@ -384,7 +381,7 @@ MessageRef1.once('value', snap => {
         <img src="yt.png">
         <a target="_blank" href="${url}"><p>${titlu}</p></a>
         <div class="editable_buttons">
-          <button data-toggle="tooltip" title="Editeaza" id="${nameKey}" onclick="edit_nodejs(this)">
+          <button data-toggle="tooltip" title="Editeaza" id="${nameKey}" onclick="edit_nodejs_link(this)">
             <i class="material-icons">
               border_color
             </i>
@@ -445,7 +442,7 @@ function delete_nodejs_link(id){
       });
 }
 
-function edit_nodejs(editElement){
+function edit_nodejs_link(editElement){
   var id_edit_main = editElement.id;
   $(".login-register-form_link_edit").modal();
   console.log(id_edit_main);
@@ -475,7 +472,7 @@ function save_edits_nodejs_firebase_link_e(){
         var ytVDescription = document.getElementById('descriere_edit_desc_link_e').value;
         var ytUrl = document.getElementById('link_edit_desc_e').value;
         var ch = document.getElementById('keyName_link').innerText;
-    firebase.database().ref('videouri').child(ch).update({
+    firebase.database().ref('videouri/').child(ch).update({
               titlu: ytVTitle,
               descriere: ytVDescription,
               url: ytUrl
@@ -516,3 +513,7 @@ function save_edits_nodejs_firebase_link_e(){
         $('.modal').modal('hide');
     });
 });
+
+// $('.modal').click(function(event){
+//   $(event.target).modal('hide');
+// });

@@ -14,8 +14,8 @@ firebase.initializeApp(firebaseConfig);
 
 
   auth.onAuthStateChanged(firebaseUser => {
-    //console.log("inside!")
     if (firebaseUser) {
+      console.log(firebaseUser.uid)
         $('body').css('display', 'block');
     }else{
         $('body').css('display', 'none');
@@ -23,21 +23,7 @@ firebase.initializeApp(firebaseConfig);
     }
 });
 
-// auth.revokeRefreshTokens(uid)
-//     .then(() => {
-//       return admin.auth().getUser(uid);
-//     })
-//     .then((userRecord) => {
-//       return new Date(userRecord.tokensValidAfterTime).getTime() / 1000;
-//     })
-//     .then((timestamp) => {
-//       //return valid response to ios app to continue the user's login process
-//   });
 
 function logout(){
     auth.signOut();
   }
-
-// window.addEventListener("beforeunload", function (e) {
-//     logout();
-// });
