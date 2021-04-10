@@ -125,7 +125,7 @@ firebase.database().ref('imagini').once('value', snap => {
                                 </div>
                             </div>
                         </div>`;
-                        console.log(option)
+                        // console.log(option)
             $('#team-members').append(option);
             // var keys_img = values_img ? Object.keys(values_img) : [];
             // console.log(keys_img)
@@ -199,5 +199,36 @@ function changeImgSize(){
     img.css('width', '70%');
     img.css('max-width', '70%');
 }
+
+
+firebase.database().ref('videouri').once('value', snap => {
+    values_database = snap.val();
+    var keys = values_database ? Object.keys(values_database) : [];
+    for(var  i = 0; i != keys.length; i++){
+        var imagini = keys[i];
+        firebase.database().ref('videouri').child(imagini).once('value', img => {
+            values_img = img.val();
+            console.log(values_img)
+            var url = img.val().url;
+            var titlu = img.val().titlu;
+            var descriere = img.val().descriere;
+            console.log(descriere)
+            url = url.replace('watch?v=', 'embed/');
+            var option = `<div class="col-sm-3 text-center" align="center" >
+            <iframe width="270px" height="200px" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>`;
+                        console.log(option)
+            $('#here_videos').append(option);
+            // var keys_img = values_img ? Object.keys(values_img) : [];
+            // console.log(keys_img)
+            // for(var j=0; j != keys_img.length; j++){
+            //     // var titlu = keys_img[i].titlu;
+            //     // console.log(keys_img)
+            // }
+        })
+
+    }
+});
+
 
 
