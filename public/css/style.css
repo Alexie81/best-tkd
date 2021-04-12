@@ -902,3 +902,30 @@ form .form-control {
 /* .vesco-top-nav a:active{
   color: rgb(53, 127, 255) !important;
 } */
+
+.btn-white2{
+  background-color: #fff !important;
+  border-color: rgba(0, 65, 179, .4);
+  border-width: 1.5px;
+  color: rgba(0, 65, 179, .4);
+  border-radius: 4px;
+  width: 120px;
+  transition: .2s ease-in-out !important;
+}
+
+.btn-white2:hover{
+  background-color: rgba(0, 65, 179, .4) !important;
+  color:  #fff !important;
+}
+
+/* .btn-white1{
+  border-color: rgba(0, 65, 179, .4);
+  border-width: 1.5px;
+  color: rgba(0, 65, 179, .4);
+  border-radius: 4px;
+  width: 120px;
+}
+.btn-white1:hover{
+  background-color: rgba(0, 65, 179, .4);
+  color: #fff;
+} */

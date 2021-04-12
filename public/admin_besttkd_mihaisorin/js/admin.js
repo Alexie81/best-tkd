@@ -120,3 +120,5 @@ $(function(){
     document.getElementById('clicks_all_main_panel_firebase_database').innerText = clicksA;
   });
 });
+
+

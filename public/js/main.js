@@ -598,7 +598,7 @@ $('body').on('click', function(){
     });
 });
 
-//JSON AJAX HTTP REQUEST
+//JSON AJAX HTTP REQUEST CLICKS
 
 // $('body').on('click', function(){
 // var ajax = new XMLHttpRequest();
@@ -629,8 +629,144 @@ $('body').on('click', function(){
 // sendA.send(clicks);
 // })
 
-//
+//TODO{
+
 
 // inregistrare minut
 // trash word
 // actualizare thread
+
+
+//}
+
+
+document.getElementById('contact_email').addEventListener('submit', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if(document.getElementById('name_full').value == ""){
+        swal({
+            icon: 'error',
+            title: 'Completeaza numele!',
+            text: '',
+            footer: ''
+          })
+    } else if(document.getElementById('email_inp').value == ""){
+        swal({
+            icon: 'error',
+            title: 'Completeaza emailul!',
+            text: '',
+            footer: ''
+          })
+    } else if(document.getElementById('message_inp').value == ""){
+        swal({
+            icon: 'error',
+            title: 'Completeaza mesajul!',
+            text: '',
+            footer: ''
+          })
+    } else {
+ var values = {
+    'name'     : $('#name_full').val(),
+    'email'     : $('#email_inp').val(),
+    'message'     : $('#message_inp').val()
+};
+document.getElementById('name_full').value = "";
+document.getElementById('email_inp').value = "";
+document.getElementById('message_inp').value = "";
+var rootElement = document.documentElement
+rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+ $.ajax({
+        url: "email_sender.php",
+        type: "POST",
+        data: values,
+        success: function (response) {
+            // NOTIFICATION PUSH FIREBASE
+            var t  = new Date();
+            var dayName = days[t.getDay()];
+            var luniName = luni[t.getMonth()];
+            var day1 = ""+t.getDate()+"";
+            if(day1.length === 1){
+                day1 = "0"+t.getDate()+"";
+            } else {
+                day1 = ""+t.getDate()+"";
+            }
+    
+    
+        //TIME{
+                var hour1 = ""+t.getHours()+"";
+    
+                if(hour1.length === 1){
+                hour1 = "0"+t.getHours()+"";
+                } else {
+                hour1 = ""+t.getHours()+"";
+                }
+    
+                var minutes1 = ""+t.getMinutes()+"";
+                if(minutes1.length === 1){
+                minutes1 = "0"+t.getMinutes()+"";
+                } else {
+                minutes1 = ""+t.getMinutes()+"";
+                }
+    
+                var sec1 = ""+t.getSeconds()+"";
+    
+                if(sec1.length === 1){
+                sec1 = "0"+t.getSeconds()+"";
+                } else {
+                sec1 = ""+t.getSeconds()+"";
+                }
+    
+    
+                //GENERIC DATA CONCATENATE
+                var ora1 = hour1+ ":" + minutes1 + ":" + sec1;
+        //}
+    
+    
+    
+    
+            var conct_date_time = day1 + "-" + luniName + "-" + t.getFullYear();
+            console.log(conct_date_time+", "+dayName)
+            firebase.database().ref('notification/site/mesaje/primite').child(conct_date_time+", "+dayName+", "+ora1).set({
+                nume: values.name,
+                email: values.email,
+                mesaj: values.message,
+                status: 'necitit'
+            });
+            // END
+           let timerInterval
+           swal({
+             title: 'Mesajul dumneavoastra a fost trimis !',
+             text: 'Mesajul dumneavoastra a fost trimis la adresa de email contact.besttkd@gmail.com',
+             icon: 'success',
+             timer: 4000,
+             timerProgressBar: true,
+             willClose: () => {
+               clearInterval(timerInterval)
+             }
+           }).then((result) => {
+           })
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           console.log(textStatus, errorThrown);
+           firebase.database().ref('notification/site/erori').push({
+            eroare: textStatus,
+            eroare_parse: errorThrown
+        });
+        }
+    });
+    //END
+}
+});
+
+
+
+
+
+
+
+
+
+

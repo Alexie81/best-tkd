@@ -354,14 +354,14 @@ height="200px"> -->
                         <div id="contact-right">
 
                             <h3 class="wow  fadeInRight animated" style="visibility: hidden; animation-name: none;"  id="sms_contact_1" onkeydown="max_generic(event, this.id, 20)">Scrie-ne un mesaj:</h3>
-                            <form action="#" class="wow  fadeInRight animated" style="visibility: hidden; animation-name: none;">
+                            <form action="" class="wow  fadeInRight animated" style="visibility: hidden; animation-name: none;" method="POST" id="contact_email">
 
-                                <input type="text" name="full-name" placeholder="Numele" class="form-control">
-                                <input type="text" name="email" placeholder="Email" class="form-control">
-                                <textarea rows="5" name="message" placeholder="Mesajul..." class="form-control"></textarea>
+                                <input type="text" name="full-name" id="name_full" placeholder="Numele" class="form-control">
+                                <input type="text" name="email" placeholder="Email" id="email_inp" class="form-control">
+                                <textarea rows="5" name="message" id="message_inp" placeholder="Mesajul..." class="form-control"></textarea>
 
                                 <div id="send-btn" align="center">
-                                    <a class="btn btn-lg btn-general btn-white1" href="#" role="button" type="submit">TRIMITE</a>
+                                    <button class="btn btn-lg btn-general btn-white2" id="email_submmit" name="submit" role="button" type="submit">TRIMITE</button>
                                 </div>
 
                             </form>
@@ -420,6 +420,8 @@ height="200px"> -->
 <!-- Include cookiealert script -->
 <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="js/dist.js"></script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first
 <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>

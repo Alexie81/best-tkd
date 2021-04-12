@@ -51,3 +51,25 @@ MessageRef.on('value', snap => {
 $(firstContent).append('</div></div></div>'); 
 
 
+  // //Nr NOTIFICATIONS Site
+  // var nrNot = parseInt(1);
+
+  // firebase.database().ref('notification/site/mesaje').on('value', snap => {
+  //   scores1 = snap.val();
+  //   if(scores1 == null){
+  //     nrNot = 1;
+  // } else {
+  //   var keys1 = scores1 ? Object.keys(scores1) : [];
+  //   nrNot = keys1.length;
+  // }
+  // document.getElementById('number-of-notify').innerText = nrNot;
+  // document.getElementById('here_notify2').innerText = nrNot;
+
+  // for(var i=0; i<keys1.length; i++){
+  //   var nume = scores1[keys1[i]].nume;
+  //   var conct_op = nume + " a trimis un mesaj nou";
+  //   var conct = `<a class="dropdown-item" href="options/notifications.html">${conct_op}</a>`
+  //   $("#here_notify").append(conct);
+  // }
+  // });
+

@@ -75,7 +75,17 @@
             <li class="nav-item ">
               <a class="nav-link" href="notifications.html">
                 <i class="material-icons">notifications</i>
-                <p>Notificari</p>
+                <p>Notificari <span style="
+                  font-weight: bold;
+                  right: 10px;
+                  font-size: 12px;
+                  background: #f44336;
+                  color: #FFFFFF;
+                  min-width: 20px;
+                  padding: 2px 10px;
+                  border-radius: 10px;
+                  text-align: center;
+                  line-height: 19px;" id="here_notify2">0</span></p>
               </a>
             </li>
 
@@ -137,17 +147,17 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
+                  <span class="notification" id="number-of-notify">0</span>
                   <p class="d-lg-none d-md-block">
                     Notificari
                   </p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="here_notify">
+                  <!-- <a class="dropdown-item" href="#">Mike John responded to your email</a>
                   <a class="dropdown-item" href="#">You have 5 new tasks</a>
                   <a class="dropdown-item" href="#">You're now friend with Andrew</a>
                   <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
+                  <a class="dropdown-item" href="#">Another One</a> -->
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -356,6 +366,7 @@
   <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
  
   <script type="text/javascript" src="../js/adminv3.js"></script>
+  <script type="text/javascript" src="../js/notify.js"></script>
 
 
 
