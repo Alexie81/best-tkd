@@ -1,14 +1,4 @@
-// $(function(){
-// var btn = document.getElementsByClassName("btn-white");
-// for (var i=0; i<1000; i++) {
-// setTimeout(function() {
-// btn.style.cssText = " border-top-right-radius: 9px; border-bottom-left-radius:9px;";
-// }, 2000);
-// setTimeout(function() {
-//     btn.style.cssText = "border-top-left-radius: 9px; border-bottom-right-radius:9px;";
-// }, 4000);
-// }
-// });
+
 var vizitatori = null;
 
 // FIREBASE
@@ -115,36 +105,6 @@ document.getElementById('max-206').innerText = text_new;
 }
 });
 
-
-//$(function(){
-//var text_initial1 = document.getElementById('max_70').innerText;
-//var text_new = null;
-//var myDiv = document.getElementById('max_70').innerText;
-//var newlength = 70;
-//var sumL =  null;
-//myDiv = document.getElementById('max_70').innerText.length;
-//if(myDiv => newlength){
-////console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial1.substring(0,newlength);
-////console.log(text_new)
-//document.getElementById('max_70').innerText = text_new;
-//} else {
-//
-//}
-//});
-
-
-//Separate functions for text
-//function max_230(selector, maxLength) {
-//    var element = document.querySelector(selector),
-//        truncated = element.innerText;
-//
-//    if (truncated.length > maxLength) {
-//        truncated = truncated.substr(0,maxLength) + '...';
-//    }
-//    return truncated;
-//}
 ////All variables what i need for the text limiter
 //document.querySelector('p').innerText = truncateText('p', 107);
 var title_initial = document.getElementById('title_change').innerText;
@@ -161,7 +121,6 @@ var text_initial_gen = null;
 var title_initial_gen = null;
 //End variables
 
-//Now, let's condition all text from page :)
 
 
 //TITLE
@@ -204,10 +163,7 @@ if(myDiv == newlength){
 title_main_initial = document.getElementById('title_main_h1').innerText;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial.substring(0,newlength);
-//console.log(text_new)
+
 var conct_all = title_main_initial + '<p id="title_change" onkeydown="title_no_modify(event)" style="text-transform: uppercase;">Best TaeKwondo</p>';
 conct_all = conct_all.substring(0, 29);
 setTimeout(function(){document.getElementById('title_main_h1').innerHTML = conct_all;}, 100);
@@ -233,10 +189,7 @@ if(myDiv == newlength){
 text_initial = document.getElementById('max-206').innerText;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial.substring(0,newlength);
-//console.log(text_new)
+
 setTimeout(function(){document.getElementById('max-206').innerText = text_initial;}, 100);
 } else{
 
@@ -300,10 +253,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_55').innerText = text_initial2;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
+
 setTimeout(function(){console.log(text_initial2)}, 200);
 var text_conct1_final = text_initial2.substring(3, newlength)
 setTimeout(function(){document.getElementById('max_55').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">TAE</strong>' + text_conct1_final}, 100);
@@ -337,10 +287,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_56').innerText = text_initial3;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
+
 setTimeout(function(){console.log(text_initial3)}, 200);
 var text_conct1_final = text_initial3.substring(4, newlength)
 setTimeout(function(){document.getElementById('max_56').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">KWON</strong>' + text_conct1_final}, 100);
@@ -374,10 +321,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_57').innerText = text_initial4;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
+
 setTimeout(function(){console.log(text_initial4)}, 200);
 var text_conct1_final = text_initial4.substring(2, newlength)
 setTimeout(function(){document.getElementById('max_57').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">DO</strong>' + text_conct1_final}, 100);
@@ -411,12 +355,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_256').innerText = text_initial5;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
-//setTimeout(function(){console.log(text_initial4)}, 200);
-//var text_conct1_final = text_initial4.substring(2, newlength)
+
 setTimeout(function(){document.getElementById('max_256').innerHTML = text_initial5}, 100);
 } else{
 
@@ -447,12 +386,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_211').innerText = text_initial6;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
-//setTimeout(function(){console.log(text_initial4)}, 200);
-//var text_conct1_final = text_initial4.substring(2, newlength)
+
 setTimeout(function(){document.getElementById('max_211').innerHTML = text_initial6}, 100);
 } else{
 
@@ -483,12 +417,7 @@ sumL = myDiv - newlength;
 document.getElementById('max_102').innerText = text_initial7;
 }
 if(myDiv >= newlength){
-//console.log("Este mai mare");
-//sumL = myDiv - newlength;
-//text_new = text_initial2.substring(0,newlength);//text_new = text_initial2;
-//text_new = text_initial2.substring(2, text_initial2.length+1);
-//setTimeout(function(){console.log(text_initial4)}, 200);
-//var text_conct1_final = text_initial4.substring(2, newlength)
+
 setTimeout(function(){document.getElementById('max_102').innerHTML = text_initial7}, 100);
 } else{
 
@@ -600,42 +529,12 @@ $('body').on('click', function(){
 
 //JSON AJAX HTTP REQUEST CLICKS
 
-// $('body').on('click', function(){
-// var ajax = new XMLHttpRequest();
-// ajax.open('GET', 'clicks.json', true);
-// ajax.setRequestHeader("Content-Type", "application/json");
-// ajax.onreadystatechange = function() {
-//   if(this.readyState == 4 && this.status == 200){
-//     console.log(this.responseText);
-//     var json = JSON.parse(this.responseText);
-//     // console.log(json.clicks)
-//   }
-// }
-// clicks = JSON.stringify({"clicks" : 3});
-// ajax.send(clicks);
-
-
-
-// var sendA = new XMLHttpRequest();
-// sendA.open('POST', 'clicks.json', true);
-// sendA.onreadystatechange = function() {
-//   if(this.readyState == 4 && this.status == 200){
-//     // console.log(this.responseText);
-//     var json = JSON.parse(this.responseText);
-//     clicks = parseInt(json.clicks) + 1;
-//   }
-// }
-// console.log(clicks)
-// sendA.send(clicks);
-// })
 
 //TODO{
-
 
 // inregistrare minut
 // trash word
 // actualizare thread
-
 
 //}
 
