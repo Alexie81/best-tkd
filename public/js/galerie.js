@@ -1,22 +1,7 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyAibhDPLow9k_2r1t-mWXhqOAbhOf8Wj2E",
-    authDomain: "best-tkd.firebaseapp.com",
-    databaseURL: "https://best-tkd-default-rtdb.firebaseio.com",
-    projectId: "best-tkd",
-    storageBucket: "best-tkd.appspot.com",
-    messagingSenderId: "628384403687",
-    appId: "1:628384403687:web:b5a8575851c9abbe2ad242",
-    measurementId: "G-RV2YCV0YTZ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-
-
+var _0x253b=['42uelxcJ','best-tkd.firebaseapp.com','9SBPaYO','15754tXrSNM','1318235gPyMuE','AIzaSyAibhDPLow9k_2r1t-mWXhqOAbhOf8Wj2E','53GpRpRl','13AWOTnf','123402nfBfwJ','initializeApp','https://best-tkd-default-rtdb.firebaseio.com','542168lojNOX','61pJEtIy','500yQqbFL','406965sxGMLI','G-RV2YCV0YTZ','best-tkd','628384403687','1:628384403687:web:b5a8575851c9abbe2ad242','best-tkd.appspot.com'];var _0xba29ae=_0x56d1;(function(_0x54d7bd,_0x1e0d02){var _0x19cf61=_0x56d1;while(!![]){try{var _0x135d0e=parseInt(_0x19cf61(0x91))+-parseInt(_0x19cf61(0x94))+parseInt(_0x19cf61(0x88))*parseInt(_0x19cf61(0x8e))+parseInt(_0x19cf61(0x8c))*-parseInt(_0x19cf61(0x93))+-parseInt(_0x19cf61(0x89))*-parseInt(_0x19cf61(0x9a))+-parseInt(_0x19cf61(0x8d))*-parseInt(_0x19cf61(0x92))+-parseInt(_0x19cf61(0x8a));if(_0x135d0e===_0x1e0d02)break;else _0x54d7bd['push'](_0x54d7bd['shift']());}catch(_0x5ee6a6){_0x54d7bd['push'](_0x54d7bd['shift']());}}}(_0x253b,0x8995b));var firebaseConfig={'apiKey':_0xba29ae(0x8b),'authDomain':_0xba29ae(0x87),'databaseURL':_0xba29ae(0x90),'projectId':_0xba29ae(0x96),'storageBucket':_0xba29ae(0x99),'messagingSenderId':_0xba29ae(0x97),'appId':_0xba29ae(0x98),'measurementId':_0xba29ae(0x95)};function _0x56d1(_0x34b7d7,_0x462143){_0x34b7d7=_0x34b7d7-0x87;var _0x253b12=_0x253b[_0x34b7d7];return _0x253b12;}firebase[_0xba29ae(0x8f)](firebaseConfig);
 /* ==========================================
             SMOOTH SCROLLING
 =============================================*/
-
 $(function () {
 
     // animate on scroll
@@ -44,64 +29,9 @@ $(function(){
     });
 });
 
-// $(function () {
-
-//     $(window).scroll(function () {
-
-//         if ($(this).scrollTop() < 50) {
-//             // hide nav
-//             $("nav").removeClass("vesco-top-nav");
-//             $("#back-to-top").fadeOut();
-//             $("#logo_to_hide1").fadeOut();
-
-//         } else {
-//             // show nav
-//             $("nav").addClass("vesco-top-nav");
-//             $("#back-to-top").fadeIn();
-//             $("#logo_to_hide1").fadeIn();
-//         }
-//     });
-//     if ($(this).scrollTop() < 50) {
-//         // hide nav
-//         $("nav").removeClass("vesco-top-nav");
-//         $("#back-to-top").fadeOut();
-//         document.getElementById('logo_to_hide1').style.display = "none";
-//     } else {
-//         // show nav
-//         $("nav").addClass("vesco-top-nav");
-//         $("#back-to-top").fadeIn();
-//         $("#logo_to_hide1").fadeIn();
-//     }
-// });
-
 $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 })
-
-
-// $(".option").click(function(){
-//     $(".option").removeClass("active");
-//     $(this).addClass("active");
-    
-//  });
- 
-
-
-
-
-// $('#team-members .owl-nav').click(function(event) {
-//     $(this).removeClass('disabled');
-//   });
-
-// $('.owl-carousel').find('.owl-nav').removeClass('disabled');
-// $('.owl-carousel').on('changed.owl.carousel', function(event) {
-// 	$(this).find('.owl-dots').removeClass('disabled');
-// });
-
-// $('.owl-carousel').on('changed.owl.carousel', function(event) {
-// 	$(this).addClass('disabled1');
-// });
-
 
 
 firebase.database().ref('imagini').once('value', snap => {
@@ -127,12 +57,6 @@ firebase.database().ref('imagini').once('value', snap => {
                         </div>`;
                         // console.log(option)
             $('#team-members').append(option);
-            // var keys_img = values_img ? Object.keys(values_img) : [];
-            // console.log(keys_img)
-            // for(var j=0; j != keys_img.length; j++){
-            //     // var titlu = keys_img[i].titlu;
-            //     // console.log(keys_img)
-            // }
         })
         .then(function(){
             setTimeout(function(){
@@ -264,15 +188,7 @@ firebase.database().ref('videouri').once('value', snap => {
             `;
             $('#here_videos').append(option);
             }
-            // console.log(i);
 
-            //             console.log(option)
-            // var keys_img = values_img ? Object.keys(values_img) : [];
-            // console.log(keys_img)
-            // for(var j=0; j != keys_img.length; j++){
-            //     // var titlu = keys_img[i].titlu;
-            //     // console.log(keys_img)
-            // }
         })
 
     }

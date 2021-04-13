@@ -3,20 +3,7 @@ var vizitatori = null;
 
 // FIREBASE
 
-var firebaseConfig = {
-    apiKey: "AIzaSyAibhDPLow9k_2r1t-mWXhqOAbhOf8Wj2E",
-    authDomain: "best-tkd.firebaseapp.com",
-    databaseURL: "https://best-tkd-default-rtdb.firebaseio.com",
-    projectId: "best-tkd",
-    storageBucket: "best-tkd.appspot.com",
-    messagingSenderId: "628384403687",
-    appId: "1:628384403687:web:b5a8575851c9abbe2ad242",
-    measurementId: "G-RV2YCV0YTZ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-
+var _0x1bc2=['76847PSonJt','277091dhDDEf','G-RV2YCV0YTZ','42104JfZEfH','48846QmfOJb','initializeApp','11oWgoIt','1LIuGBm','150178mWzfIU','429272EwhHeR','best-tkd.firebaseapp.com','AIzaSyAibhDPLow9k_2r1t-mWXhqOAbhOf8Wj2E','1ZHwRRU','1:628384403687:web:b5a8575851c9abbe2ad242','best-tkd','591695UQpqpd','628384403687'];var _0x555a90=_0x4b77;(function(_0x5d2ec2,_0x2d643a){var _0xd894bc=_0x4b77;while(!![]){try{var _0x11ca40=parseInt(_0xd894bc(0x188))*-parseInt(_0xd894bc(0x18b))+parseInt(_0xd894bc(0x185))*parseInt(_0xd894bc(0x18c))+-parseInt(_0xd894bc(0x186))+-parseInt(_0xd894bc(0x18d))+parseInt(_0xd894bc(0x191))*parseInt(_0xd894bc(0x18e))+parseInt(_0xd894bc(0x189))+parseInt(_0xd894bc(0x183));if(_0x11ca40===_0x2d643a)break;else _0x5d2ec2['push'](_0x5d2ec2['shift']());}catch(_0x427a66){_0x5d2ec2['push'](_0x5d2ec2['shift']());}}}(_0x1bc2,0x3e8f7));function _0x4b77(_0x392afe,_0x1f0749){_0x392afe=_0x392afe-0x181;var _0x1bc2b1=_0x1bc2[_0x392afe];return _0x1bc2b1;}var firebaseConfig={'apiKey':_0x555a90(0x190),'authDomain':_0x555a90(0x18f),'databaseURL':'https://best-tkd-default-rtdb.firebaseio.com','projectId':_0x555a90(0x182),'storageBucket':'best-tkd.appspot.com','messagingSenderId':_0x555a90(0x184),'appId':_0x555a90(0x181),'measurementId':_0x555a90(0x187)};firebase[_0x555a90(0x18a)](firebaseConfig);
 
 /* ==========================================
             SMOOTH SCROLLING
