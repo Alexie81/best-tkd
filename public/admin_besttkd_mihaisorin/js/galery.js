@@ -18,7 +18,7 @@ storageRef.child('imagini').listAll().then(function(result){
 });
 function displayImage(images){
     images.getDownloadURL().then(function(url){
-        console.log(url);
+        // console.log(url);
     });
 }
 
@@ -53,12 +53,12 @@ function uploadImageFirebase(){
     const nameFile = file.name;
     var tit1 = null;
     var descTd = null;
-    console.log(nameFile);
+    // console.log(nameFile);
     const metadata = {
       contentType:file.type
     }
     st1 = storageRef.child('imagini/'+nameFile)
-    console.log(st1)
+    // console.log(st1)
     const task = storageRef.child("images/"+nameFile).put(file, metadata);
     task
     .then(snapshot =>snapshot.ref.getDownloadURL())
@@ -72,7 +72,7 @@ function uploadImageFirebase(){
         descriere: descTd
     });
     window.location = 'galerie.html'
-    console.log(url)
+    // console.log(url)
     });
 } else {
     if(document.getElementById('titlu').value === ""){
@@ -172,7 +172,7 @@ var Element232 = null;
 function edit_nodejs(editElement){
     var id_edit_main = editElement.id;
     $(".login-register-form-edit").modal();
-    console.log(id_edit_main);
+    // console.log(id_edit_main);
     MessageRef.once('value', edit => {
         values_edit = edit.val();
         keys_edit = values_edit ? Object.keys(values_edit) : [];
@@ -212,14 +212,14 @@ function save_edits_nodejs_firebase(){
             descriere: descTd
         });
         setTimeout(function(){window.location  = 'galerie.html'}, 1000)
-        console.log(url)
+        // console.log(url)
         });
     } else {
         st1 = storageRef.child('imagini/'+Element232)
-        console.log(st1)
+        // console.log(st1)
         tit1 = document.getElementById('titlu_edit_desc').value;
             descTd = document.getElementById('descriere_edit_desc').value;
-            console.log(currentUrl)
+            // console.log(currentUrl)
         firebase.database().ref('imagini').child(Element232).update({
             titlu: tit1,
             descriere: descTd
@@ -435,7 +435,7 @@ MessageRef1.once('value', snap => {
 });
 function delete_nodejs_link(id){
   var id_main = id.id.replace('sterge_', '');
-  console.log(id_main);
+  // console.log(id_main);
   Swal.fire({
     title: 'Sunteti sigur vreti sa stergeti acest videoclip ?',
     icon: 'warning',
@@ -447,7 +447,7 @@ function delete_nodejs_link(id){
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
           firebase.database().ref('videouri/'+id_main).remove();
-          console.log('success');
+          // console.log('success');
           setTimeout(function(){window.location  = 'galerie.html'}, 1000)
         } else if (result.isDenied) {
           return false;
@@ -458,7 +458,7 @@ function delete_nodejs_link(id){
 function edit_nodejs_link(editElement){
   var id_edit_main = editElement.id;
   $(".login-register-form_link_edit").modal();
-  console.log(id_edit_main);
+  // console.log(id_edit_main);
   MessageRef1.once('value', edit => {
       values_edit = edit.val();
       keys_edit = values_edit ? Object.keys(values_edit) : [];

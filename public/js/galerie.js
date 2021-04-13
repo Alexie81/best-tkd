@@ -41,11 +41,11 @@ firebase.database().ref('imagini').once('value', snap => {
         var imagini = keys[i];
         firebase.database().ref('imagini').child(imagini).once('value', img => {
             values_img = img.val();
-            console.log(values_img)
+            // console.log(values_img)
             var url = img.val().url;
             var titlu = img.val().titlu;
             var descriere = img.val().descriere;
-            console.log(descriere)
+            // console.log(descriere)
             var option = `<div class="team-member wow animated zoomIn">
                             <a href="${url}" class="img_pop effect"><img src="${url}" class="img-responsive" alt="team member"></a>
                             <div class="team-member-info text-center">
@@ -148,7 +148,7 @@ firebase.database().ref('videouri').once('value', snap => {
     var trick = {}
     for (let i = 0; i !== newKeys.length; ++i){
         trick[String("VideoYt-"+newKeys[i])] = i;
-        console.log(trick[String("VideoYt-"+newKeys[i])])
+        // console.log(trick[String("VideoYt-"+newKeys[i])])
     }
     for(var  i = 0; i !== newKeys.length; i++){
         var imagini = String("VideoYt-"+newKeys[i]);
@@ -156,15 +156,15 @@ firebase.database().ref('videouri').once('value', snap => {
 
         firebase.database().ref('videouri').child(imagini).once('value', img => {
             values_img = img.val();
-            console.log(img)
-            console.log(values_img)
+            // console.log(img)
+            // console.log(values_img)
             var url = img.val().url;
             var titlu = img.val().titlu;
             var descriere = img.val().descriere;
             url = url.replace('watch?v=', 'embed/');
             var option = null;
             let myIndex = trick[img.key];
-                console.log(myIndex);
+                // console.log(myIndex);
             if (myIndex % 4 !== 3) {
                 option = `<div class="col-sm-3 text-center wow animated zoomIn" align="center" style="margin-bottom: 30px !important;">
                 <div>

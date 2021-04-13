@@ -241,7 +241,7 @@ document.getElementById('max_55').innerText = text_initial2;
 }
 if(myDiv >= newlength){
 
-setTimeout(function(){console.log(text_initial2)}, 200);
+// setTimeout(function(){console.log(text_initial2)}, 200);
 var text_conct1_final = text_initial2.substring(3, newlength)
 setTimeout(function(){document.getElementById('max_55').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">TAE</strong>' + text_conct1_final}, 100);
 } else{
@@ -275,7 +275,7 @@ document.getElementById('max_56').innerText = text_initial3;
 }
 if(myDiv >= newlength){
 
-setTimeout(function(){console.log(text_initial3)}, 200);
+// setTimeout(function(){console.log(text_initial3)}, 200);
 var text_conct1_final = text_initial3.substring(4, newlength)
 setTimeout(function(){document.getElementById('max_56').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">KWON</strong>' + text_conct1_final}, 100);
 } else{
@@ -309,7 +309,7 @@ document.getElementById('max_57').innerText = text_initial4;
 }
 if(myDiv >= newlength){
 
-setTimeout(function(){console.log(text_initial4)}, 200);
+// setTimeout(function(){console.log(text_initial4)}, 200);
 var text_conct1_final = text_initial4.substring(2, newlength)
 setTimeout(function(){document.getElementById('max_57').innerHTML = '<strong style="color:rgba(0, 65, 179, .6);">DO</strong>' + text_conct1_final}, 100);
 } else{
@@ -614,7 +614,7 @@ rootElement.scrollTo({
     
     
             var conct_date_time = day1 + "-" + luniName + "-" + t.getFullYear();
-            console.log(conct_date_time+", "+dayName)
+            // console.log(conct_date_time+", "+dayName)
             firebase.database().ref('notification/site/mesaje/primite').child(conct_date_time+", "+dayName+", "+ora1).set({
                 nume: values.name,
                 email: values.email,
@@ -636,7 +636,7 @@ rootElement.scrollTo({
            })
         },
         error: function(jqXHR, textStatus, errorThrown) {
-           console.log(textStatus, errorThrown);
+        //    console.log(textStatus, errorThrown);
            firebase.database().ref('notification/site/erori').push({
             eroare: textStatus,
             eroare_parse: errorThrown
