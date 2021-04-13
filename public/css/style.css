@@ -929,3 +929,24 @@ form .form-control {
   background-color: rgba(0, 65, 179, .4);
   color: #fff;
 } */
+.federatie{
+  color: #fff;
+  background-color: rgba(0, 65, 179, .3);
+  width: 300px;
+  height: 25px;
+  padding-top: 3px;
+  border-radius: 4px;
+}
+.federatie1{
+  color: #fff;
+  width: 300px;
+  height: 25px;
+  padding-top: 3px;
+  border-radius: 4px;
+}
+#federatie{
+  position: absolute;
+  bottom: 0 !important;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

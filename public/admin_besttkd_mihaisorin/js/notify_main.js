@@ -37,9 +37,9 @@ $(function(){
         <span class="sr-only">Close</span>
       </button>
             <div>
-      <button type="button" class="close font__size-18" data-columns="${keys1[i]}" onclick="read_main_thread(this)">
+      <button type="button" class="close font__size-18" data-columns="${keys1[i]}">
         <span aria-hidden="true" style="width: 100px; text-align: right; margin-right: -30px;">
-          <i class="fa fa-trash-o "></i>
+          <i class="fa fa-trash-o"></i>
         </span>
         <span class="sr-only">Close</span>
       </button>
@@ -59,7 +59,20 @@ $(function(){
 });
 
 function read_main_thread(element){
-    firebase.database().ref('notification/site/mesaje/primite/'+element.dataset.columns).remove()
+  Swal.fire({
+    icon: 'warning',
+    title: 'Doriti sa stergeti ?',
+    text: "Nu veti mai putea recupera datele sterse.",
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Da, sterge',
+    cancelButtonText: 'Nu, anuleaza'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      firebase.database().ref('notification/site/mesaje/primite/'+element.dataset.columns).remove()
+    }
+  })
 }
 
 function open_modal_send(element, event){
@@ -262,4 +275,53 @@ function stopPropagation(event) {
         });
         //END
     }
+  }
+
+
+  $(function() {
+    firebase.database().ref('notification/site/mesaje/trimise').on('value', trmi => {
+      value = trmi.val();
+      $("#notify_main_trimise").empty();
+      var keys = value ? Object.keys(value) : [];
+      for(var i=0; i<keys.length; i++){
+        var email = value[keys[i]].email;
+        var conct = `<div class="col-sm-12">
+        <div data-typeId="trmimis" class="alert fade alert-simple alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert" style="cursor: pointer;">
+        <button type="button" class="close font__size-18">
+        <span aria-hidden="true" style="width: 230px; margin-top:3px; text-align: right; margin-right: -30px;">
+          <i style=" color: #000; font-size: 12px;">${keys[i]}</i>
+        </span>
+        <span class="sr-only">Close</span>
+      </button>
+
+      <button type="button" class="close font__size-18" data-columns="${keys[i]}" onclick="read_main_thread_trm(this)">
+        <span aria-hidden="true" style="width: 250px; text-align: left; margin-right: -30px;">
+          <i class="fa fa-trash-o"></i>
+        </span>
+        <span class="sr-only">Close</span>
+      </button>
+          <p style="display:inline; color: #000;">Catre: </p> <p style="display:inline; color: #000; font-weight: 600;">${email}</p>
+        </div>
+
+      </div>`
+        $("#notify_main_trimise").append(conct);
+      }
+    });
+  });
+
+  function read_main_thread_trm(elementTrm){
+    Swal.fire({
+      icon: 'warning',
+      title: 'Doriti sa stergeti ?',
+      text: "Nu veti mai putea recupera datele sterse.",
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Da, sterge',
+      cancelButtonText: 'Nu, anuleaza'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        firebase.database().ref('notification/site/mesaje/trimise/'+elementTrm.dataset.columns).remove()
+      }
+    })
   }

@@ -86,7 +86,7 @@ body {
 }
 
 .team-member-info {
-    padding: 10px 0 30px 0;
+    padding: 30px 0 0 0;
 }
 
 h4.team-member-name {
@@ -103,7 +103,7 @@ p.team-member-designation {
     font-style: italic;
     letter-spacing: 1px;
     margin-top: 5px;
-    width: 300px !important;
+    width: 100% !important;
     display: block;
     word-wrap: break-word;
     text-overflow: ellipsis;
