@@ -252,7 +252,18 @@ function save_edits_nodejs_firebase(){
 
 
 
-
+function YouTubeGetID(url){
+  var ID = '';
+  url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+  if(url[2] !== undefined) {
+    ID = url[2].split(/[^0-9a-z_\-]/i);
+    ID = ID[0];
+  }
+  else {
+    ID = url;
+  }
+    return ID;
+}
 
 
 
@@ -268,7 +279,9 @@ function save_edits_nodejs_firebase_link(){
         nrV = keys.length + 1;
         var ytVTitle = document.getElementById('titlu_edit_desc_link').value;
         var ytVDescription = document.getElementById('descriere_edit_desc_link').value;
-        var ytUrl = document.getElementById('link_edit_desc').value;
+        var yturl1 = document.getElementById('link_edit_desc').value;
+        var ytUrl_sub = YouTubeGetID(yturl1);
+        var ytUrl = "https://www.youtube.com/embed/"+ytUrl_sub;
     firebase.database().ref('videouri').child('VideoYt-'+nrV).set({
               titlu: ytVTitle,
               descriere: ytVDescription,

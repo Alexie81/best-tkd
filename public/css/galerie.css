@@ -97,9 +97,9 @@ h4.team-member-name {
 }
 
 p.team-member-designation {
-    color: rgba(0, 65, 179, .8);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
     letter-spacing: 1px;
     margin-top: 5px;

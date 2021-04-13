@@ -206,19 +206,60 @@ firebase.database().ref('videouri').once('value', snap => {
     var keys = values_database ? Object.keys(values_database) : [];
     for(var  i = 0; i != keys.length; i++){
         var imagini = keys[i];
+        console.log(i);
+        // console.log(i%1)
+        if(i%1 != (i-3)){
+            firebase.database().ref('videouri').child(imagini).once('value', img => {
+                values_img = img.val();
+                var keys1 = values_img ? Object.keys(values_img) : [];
+                var url = img.val().url;
+                var titlu = img.val().titlu;
+                var descriere = img.val().descriere;
+                url = url.replace('watch?v=', 'embed/');
+                var option = null;
+                    // console.log(i);
+                option = `<div class="col-sm-3 text-center wow animated zoomIn" align="center" style="margin-bottom: 30px !important;">
+                <div>
+                <iframe width="270px" height="200px" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4 style="font-weight: 600;">${titlu}</h4>
+                <p style="width:300px; word-wrap: break-word; display:block;margin:0 auto;">${descriere}</p>
+                </div>
+                </div>`;
+                $('#here_videos').append(option);
+                // console.log(i);
+    
+                //             console.log(option)
+                // var keys_img = values_img ? Object.keys(values_img) : [];
+                // console.log(keys_img)
+                // for(var j=0; j != keys_img.length; j++){
+                //     // var titlu = keys_img[i].titlu;
+                //     // console.log(keys_img)
+                // }
+            })
+        } else {
         firebase.database().ref('videouri').child(imagini).once('value', img => {
             values_img = img.val();
-            console.log(values_img)
+            var keys1 = values_img ? Object.keys(values_img) : [];
             var url = img.val().url;
             var titlu = img.val().titlu;
             var descriere = img.val().descriere;
-            console.log(descriere)
             url = url.replace('watch?v=', 'embed/');
-            var option = `<div class="col-sm-3 text-center" align="center" >
-            <iframe width="270px" height="200px" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>`;
-                        console.log(option)
-            $('#here_videos').append(option);
+            var option = null;
+            option = `
+            <div class="row">
+            <div class="col-sm-3 text-center wow animated zoomIn" align="center" style="margin-bottom: 30px !important;">
+        <div>
+        <iframe width="270px" height="200px" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h4 style="font-weight: 600;">${titlu}</h4>
+        <p style="width:300px; word-wrap: break-word; display:block;margin:0 auto;">${descriere}</p>
+        </div>
+        </div>
+        </div>
+        `;
+        $('#here_videos').append(option);
+            // console.log(i);
+
+            //             console.log(option)
             // var keys_img = values_img ? Object.keys(values_img) : [];
             // console.log(keys_img)
             // for(var j=0; j != keys_img.length; j++){
@@ -228,6 +269,7 @@ firebase.database().ref('videouri').once('value', snap => {
         })
 
     }
+}
 });
 
 
