@@ -21,7 +21,7 @@ $(function () {
         //get/return id like #about, #work, #team and etc
         var section = $(this).attr("href");
         $('html, body').animate({
-            scrollTop: $(section).offset().top - 64
+            scrollTop: $(section).offset().top - 200
         }, 1250, "easeInOutExpo");
     });
 

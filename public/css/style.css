@@ -950,3 +950,78 @@ form .form-control {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#program{
+  width: 100% !important;
+  height: 55%;
+  margin-top: 150px !important;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/jsq.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: .3s ease-in-out;
+  color: #fff !important;
+  /* background-color: #fff !important;
+  z-index: 10000000000000000000000000000000000 !important; */
+}
+.main_program{
+  margin-top: 100px !important;
+}
+.text_pro{
+  text-transform: uppercase !important;
+}
+@media (max-width: 982px){
+  #program{
+    margin-top: 100px !important;
+  }
+}
+.today_pro{
+  font-size: 100px !important;
+  font-weight: 600 !important;
+}
+.top_pro_mg{
+  margin-top: 30px !important;
+}
+.vcenter-item{
+  display: flex;
+  align-items: center;
+}
+.hours_pro{
+  padding-top: 50px !important;
+}
+
+@media (max-width: 992px){
+  #program{
+    height: 100% !important;
+  }
+  #arr_up, 
+  #arr_down{
+    display: block;
+  }
+  .hours_pro{
+    padding-top: 0 !important;
+  }
+  .today_pro{
+    font-size: 50px !important;
+  }
+  .top_pro_mg{
+    height: 100px !important;
+  }
+  .orar_pro{
+    margin-top: 30px !important;
+    height: 100px !important;
+    margin-bottom: 45px !important;
+  }
+}
+
+@media (min-width: 992px){
+  #arr_up, 
+  #arr_down{
+    display: none;
+  }
+
+}
