@@ -37,7 +37,7 @@ $(function(){
         <span class="sr-only">Close</span>
       </button>
             <div>
-      <button type="button" class="close font__size-18" data-columns="${keys1[i]}">
+      <button type="button" class="close font__size-18" onclick="read_main_thread(this)" data-columns="${keys1[i]}">
         <span aria-hidden="true" style="width: 100px; text-align: right; margin-right: -30px;">
           <i class="fa fa-trash-o"></i>
         </span>

@@ -16,7 +16,7 @@ $(function(){
         if(scores1[keys1[i]].status === 'necitit') {
           setTimeout(showNrNot(), 300)
         var conct_op = nume + " a trimis un mesaj nou";
-        var conct = `<a class="dropdown-item" href="notifications.html">${conct_op}</a>`
+        var conct = `<a class="dropdown-item" href="options/notifications.html">${conct_op}</a>`
         $("#here_notify").append(conct);
         } else {
           //Do nothing
