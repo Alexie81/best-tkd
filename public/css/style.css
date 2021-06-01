@@ -973,6 +973,7 @@ form .form-control {
 }
 .text_pro{
   text-transform: uppercase !important;
+  font-size: 40px !important;
 }
 @media (max-width: 982px){
   #program{
@@ -992,6 +993,7 @@ form .form-control {
 }
 .hours_pro{
   padding-top: 50px !important;
+  margin-bottom: 20px !important;
 }
 
 @media (max-width: 992px){
@@ -1016,6 +1018,17 @@ form .form-control {
     height: 100px !important;
     margin-bottom: 45px !important;
   }
+}
+
+.orar_h3_cl{
+  font-size: 40px !important;
+}
+#arr_up{
+  margin-top: 0 !important;
+}
+#arr_down{
+  margin-top: 0 !important;
+  margin-bottom: 100px !important;
 }
 
 @media (min-width: 992px){
